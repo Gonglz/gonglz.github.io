@@ -114,14 +114,14 @@ analytics:
 # Site Author
 author:
   name             : "Longzhao Gong"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/bio-photo.jpg"
   bio              : "In search of hidden passion, crossing barren lands once brushed by fleeting birds."
   location         : "New Jersey, USA / Shaanxi, China"
   email            : "gonglz@hotmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url:  "mailto:gonglz@hotmail.com"
+      #url:  "mailto:gonglz@hotmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -133,7 +133,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/gonglz"
+      #url: "https://github.com/gonglz"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
