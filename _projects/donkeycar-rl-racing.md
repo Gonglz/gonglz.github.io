@@ -1,65 +1,184 @@
 ---
-title: "DonkeyCar RL Racing"
-excerpt: "Simulator-to-device reinforcement learning workflow for autonomous driving experiments on DonkeyCar and Jetson platforms."
+title: "Sim-to-Real Autonomous Racing on Jetson Nano"
+excerpt: "An engineering case study of a DonkeyCar / JetRacer reinforcement learning stack, from multi-scene PPO training to Jetson TensorRT deployment, safety gates, and reproducible shadow validation."
 classes: wide
 ---
 
-## One-line Summary
+<div class="case-study-hero" markdown="1">
+<div class="case-study-hero__copy" markdown="1">
 
-Deploying reinforcement learning policies to a DonkeyCar platform with a simulator-to-device workflow.
+## Reinforcement learning, multimodal perception, and edge deployment for a small autonomous racing platform
 
-## Problem
+This project is an end-to-end autonomous racing system built around DonkeyCar, DonkeySim, Jetson Nano, and a Waveshare JetRacer-style vehicle. The goal was not just to train a reinforcement learning policy in simulation, but to carry that policy through the real deployment chain: sensors, model export, embedded inference, control adaptation, runtime logging, and safety validation.
 
-Small autonomous vehicles are useful learning platforms, but the full loop from simulation to physical deployment can be hard to organize. This project focuses on making the reinforcement learning workflow concrete: training policies, managing track profiles, and preparing models for deployment on resource-constrained hardware.
+I treated the project as a **sim-to-real systems engineering problem**. The final engineering stack connects camera input, 360-degree LiDAR, RP2040 telemetry, a multimodal recurrent PPO actor, action adaptation, Jetson-side monitoring, TensorRT inference, and shadow-mode validation.
+
+</div>
+<div class="case-study-hero__panel" markdown="1">
+
+**Project type**  
+Autonomous systems / Reinforcement learning / Edge AI
+
+**Platform**  
+Jetson Nano + DonkeyCar / Waveshare JetRacer
+
+**Core stack**  
+Python, DonkeyCar, Stable-Baselines3, PyTorch, ONNX, TensorRT, ROS LiDAR
+
+**Status**  
+V17 endpoint deployment chain completed and frozen in shadow mode. Active obstacle-avoidance performance remains a separate model-quality problem.
+
+</div>
+</div>
+
+<div class="metric-grid" markdown="1">
+
+<div class="metric-card" markdown="1">
+<span class="metric-card__label">Model</span>
+<strong>RecurrentPPO multimodal actor</strong>
+<span>6-channel semantic image, state vector, LiDAR sectors, and LSTM state</span>
+</div>
+
+<div class="metric-card" markdown="1">
+<span class="metric-card__label">Sensors</span>
+<strong>Camera + 360° LiDAR + RP2040</strong>
+<span>Vision, range sectors, telemetry, scan-age awareness, and runtime diagnostics</span>
+</div>
+
+<div class="metric-card" markdown="1">
+<span class="metric-card__label">Deployment</span>
+<strong>ONNX → TensorRT FP16</strong>
+<span>Actor-only export, TensorRT engine, CUDA runtime wrapper, and Jetson shadow backend</span>
+</div>
+
+<div class="metric-card" markdown="1">
+<span class="metric-card__label">Validation</span>
+<strong>180s / 10min / 20min shadow runs</strong>
+<span>Preflight checks, safety counters, CSV summaries, and non-takeover shadow mode</span>
+</div>
+
+</div>
+
+## Engineering Problem
+
+A simulator-trained racing policy cannot be dropped directly onto a physical Jetson-powered car. The failure modes are coupled:
+
+- simulation and real vehicle dynamics do not match;
+- camera, LiDAR, and telemetry streams arrive at different rates;
+- Jetson Nano has tight compute, memory, and runtime constraints;
+- DonkeyCar, Gym, Stable-Baselines3, TensorFlow/Keras, PyTorch, and Jetson Python versions create deployment friction;
+- logging and telemetry can block the vehicle loop if implemented naively;
+- a policy that looks stable in simulation can still be unsafe or unusable on real hardware.
+
+The project therefore evolved from a reinforcement learning experiment into a full deployment-oriented autonomy stack.
 
 ## System Architecture
 
-The project is organized around a simulator-to-device workflow:
+<div class="architecture-flow" markdown="1">
 
-- Simulation and training environment for reinforcement learning experiments
-- Track profiles and configuration files for repeatable runs
-- Model and module structure for policy training and evaluation
-- Jetson-oriented deployment path for running experiments closer to the vehicle
+<div markdown="1">**DonkeyCar / DonkeySim**<br><span>multi-scene PPO training</span></div>
+<div markdown="1">**Policy export**<br><span>Keras, PyTorch weights, ONNX</span></div>
+<div markdown="1">**Jetson runtime**<br><span>camera, LiDAR, RP2040</span></div>
+<div markdown="1">**V17 actor backend**<br><span>PyTorch / TensorRT FP16</span></div>
+<div markdown="1">**Action + safety layer**<br><span>adapter, gates, shadow logs</span></div>
 
-## My Contribution
+</div>
 
-- Structured the project around reinforcement learning experiments for DonkeyCar
-- Organized training, testing, and deployment-related code paths
-- Worked with edge hardware constraints as part of the autonomous driving workflow
-- Documented the workflow so experiments can be repeated and extended
+The final V17 runtime path is:
 
-## Technical Stack
+```text
+CSI camera + 360° LiDAR /scan + RP2040 telemetry
+        ↓
+Semantic image preprocessing + LiDAR sectorization + state vector
+        ↓
+V17 RecurrentPPO actor backend
+        ↓
+Action adapter + deployment safety gate
+        ↓
+Shadow-mode logging or real actuator path
+        ↓
+CSV, summary JSON, telemetry, and reproducible reports
+```
 
-`Python` `DonkeyCar` `Reinforcement Learning` `Jetson` `Computer Vision` `Edge AI`
+The deployed model is not a simple image-only CNN. It uses a dictionary observation with semantic image channels, ego-state features, LiDAR range/validity sectors, timing metadata, and persistent LSTM state.
 
-## Results / Current Status
+## My Engineering Contribution
 
-This is the strongest flagship project for the site because it combines autonomous systems, reinforcement learning, and edge deployment in one coherent engineering story.
+<div class="contribution-grid" markdown="1">
 
-## Recognition
+<div markdown="1">
+### Training Infrastructure
+Built PPO training loops, parallel simulation workflows, curriculum logic, reward shaping, checkpointing, monitoring, and multi-scene sampling.
+</div>
 
-- **05/28/2026**: Received the **2026 Outstanding Master's Student Award in Computer Engineering** as a master's student RA. The announcement was shared by [IntelliSys Lab](https://intellisys.haow.us/), with the SES community event [video timestamp](https://youtu.be/c1m_otsr8sM?si=woDszEBnCbNG9tgU&t=1057).
+<div markdown="1">
+### Deployment Interface
+Created practical model bridges from PPO to Jetson, including PPO-to-Keras distillation and direct PyTorch policy-weight inference.
+</div>
+
+<div markdown="1">
+### Multimodal Perception
+Integrated camera features, semantic image channels, LiDAR sectors, timing metadata, and vehicle telemetry into policy observations.
+</div>
+
+<div markdown="1">
+### Sim-to-Real Alignment
+Measured simulator-vs-real differences in steering, throttle, control frequency, LiDAR semantics, and vehicle response.
+</div>
+
+<div markdown="1">
+### Runtime Optimization
+Profiled the Jetson chain and moved bottlenecks out of the vehicle loop: LiDAR sectorization, async logging, and telemetry caching.
+</div>
+
+<div markdown="1">
+### Safety and Validation
+Added engine/metadata preflight checks, LiDAR/RP2040 gates, inference timeout counters, safety summaries, and shadow-mode validation.
+</div>
+
+</div>
 
 ## Project Timeline
 
-This timeline compresses the raw weekly engineering logs into a public project story. It keeps only the major inflection points: system stability, perception, sim-to-real deployment, multi-agent work, generalization, and hardware alignment.
+This timeline compresses the raw weekly engineering logs into a public engineering story. It intentionally uses **large implementation milestones**, not weekly status updates.
 
 <div class="project-timeline" markdown="1">
 
-<article class="timeline-node" tabindex="0" markdown="1">
+<article class="timeline-node timeline-node--major" tabindex="0" markdown="1">
 <div class="timeline-card" markdown="1">
 <span class="timeline-date">Jul 2025</span>
 <img src="/assets/images/projects/smartcar-timeline/2025-07-parallel-sim.jpg" alt="Parallel DonkeySim training windows" class="timeline-thumb">
 
-### Stable PPO and Parallel Simulation
+### 1. Stable PPO Training Foundation
 
-Built the first stable PPO training loop and moved from single-run experiments toward parallel simulator workflows.
+Built the first usable reinforcement learning baseline and stabilized the simulator training loop.
 
 <div class="timeline-detail" markdown="1">
 
 - Fixed deadlocks, NumPy crashes, reconnect failures, and simulator recovery issues.
-- Added reward, speed, deviation, collision, and efficiency monitoring.
-- Identified CPU saturation during PPO updates as a key bottleneck for multi-simulator training.
+- Added monitoring for reward, speed, deviation, collisions, and efficiency.
+- Implemented early safeguards against catastrophic forgetting and unstable CTE behavior.
+- Moved from isolated experiments toward parallel training and reproducible runs.
+
+</div>
+</div>
+</article>
+
+<article class="timeline-node" tabindex="0" markdown="1">
+<div class="timeline-card" markdown="1">
+<span class="timeline-date">Jul–Aug 2025</span>
+<img src="/assets/images/projects/smartcar-timeline/2025-08-yolo-coach.jpg" alt="YOLO perception overlay from follower car camera" class="timeline-thumb">
+
+### 2. Multi-Agent and Multimodal Exploration
+
+Expanded the project from single-car lane following to multi-car interaction, camera perception, LiDAR, and overtaking logic.
+
+<div class="timeline-detail" markdown="1">
+
+- Launched multi-car / multi-environment training experiments.
+- Added camera detection modules and early overtaking decision logic.
+- Integrated LiDAR as an additional observation channel.
+- Built a dual-car YOLO + Coach prototype for collision risk, following distance, and overtaking advice.
 
 </div>
 </div>
@@ -67,56 +186,19 @@ Built the first stable PPO training loop and moved from single-run experiments t
 
 <article class="timeline-node timeline-node--major" tabindex="0" markdown="1">
 <div class="timeline-card" markdown="1">
-<span class="timeline-date">Aug 2025</span>
-<img src="/assets/images/projects/smartcar-timeline/2025-08-yolo-coach.jpg" alt="YOLO perception overlay from follower car camera" class="timeline-thumb">
-
-### Perception and Coach Layer
-
-Added a perception layer for dual-car experiments, connecting camera detections to higher-level driving advice.
-
-<div class="timeline-detail" markdown="1">
-
-- Integrated YOLO-style detection for vehicles, cones, signs, and lane cues.
-- Built a Coach module that reasoned over following distance, collision risk, and overtaking opportunities.
-- Started converting perception outputs into structured JSON for local model-assisted analysis.
-
-</div>
-</div>
-</article>
-
-<article class="timeline-node" tabindex="0" markdown="1">
-<div class="timeline-card" markdown="1">
 <span class="timeline-date">Sep 2025</span>
 <img src="/assets/images/projects/smartcar-timeline/2025-09-jetson-baseline.jpg" alt="Jetson camera and simulator validation view" class="timeline-thumb">
 
-### Jetson Baseline Deployment
+### 3. Real-Car Deployment Contract
 
 Validated the full DonkeyCar deployment path on Jetson before forcing reinforcement learning models into the vehicle stack.
 
 <div class="timeline-detail" markdown="1">
 
 - Trained and deployed a compatible KerasLinear `.h5` baseline.
-- Verified the pipeline from CSICamera to model inference, Web Controller, and real vehicle control.
-- Clarified model contracts: image shape, RGB preprocessing, steering range, and throttle range.
-
-</div>
-</div>
-</article>
-
-<article class="timeline-node timeline-node--major" tabindex="0" markdown="1">
-<div class="timeline-card" markdown="1">
-<span class="timeline-date">Oct 2025</span>
-<img src="/assets/images/projects/smartcar-timeline/2025-10-distilled-model.jpg" alt="Distilled DonkeyCar model running in a simulated indoor track" class="timeline-thumb">
-
-### PPO to Vehicle-Ready Models
-
-Created practical deployment routes for reinforcement learning policies on Jetson Nano.
-
-<div class="timeline-detail" markdown="1">
-
-- Built a PPO-to-distilled-Keras `.h5` pipeline that could run through DonkeyCar.
-- Removed TensorFlow Lambda dependencies to improve Jetson Nano compatibility.
-- Later adopted a direct PyTorch inference path by exporting policy weights to `.pth`, reducing model size and avoiding fragile `.zip` deserialization.
+- Verified the CSICamera → model inference → Web Controller → real vehicle control path.
+- Clarified deployment contracts for image size, RGB preprocessing, steering range, throttle range, and model output order.
+- Used the baseline as the reference interface for later RL deployment.
 
 </div>
 </div>
@@ -124,18 +206,19 @@ Created practical deployment routes for reinforcement learning policies on Jetso
 
 <article class="timeline-node" tabindex="0" markdown="1">
 <div class="timeline-card" markdown="1">
-<span class="timeline-date">Feb 2026</span>
-<img src="/assets/images/projects/smartcar-timeline/2026-02-obstacle-training.jpg" alt="Generated track with static obstacles in DonkeySim" class="timeline-thumb">
+<span class="timeline-date">Sep–Oct 2025</span>
+<img src="/assets/images/projects/smartcar-timeline/2025-10-distilled-model.jpg" alt="Distilled DonkeyCar model running in a simulated indoor track" class="timeline-thumb">
 
-### Safety-Aware Training and Obstacle Behavior
+### 4. RL-to-Jetson Model Bridge
 
-Moved from lane following toward safety-aware control, smoother actuation, and obstacle-aware behavior.
+Created practical deployment routes for reinforcement learning policies under Jetson Nano compatibility constraints.
 
 <div class="timeline-detail" markdown="1">
 
-- Upgraded observations to include RGB differences, yellow masks, and edge channels.
-- Added action safety logic: slew-rate limits, low-pass filtering, smoothness penalties, and mismatch diagnostics.
-- Observed early obstacle-aware behavior such as slowing down and reversing as recovery.
+- Built a PPO-to-distilled-Keras `.h5` pipeline for DonkeyCar compatibility.
+- Removed fragile TensorFlow Lambda dependencies for Jetson Nano deployment.
+- Rebuilt the RL environment around compatible DonkeyCar, Gym, SB3, Python, and Jetson versions.
+- Later adopted a direct `.pth` policy-weight inference route to avoid SB3/cloudpickle `.zip` deserialization problems.
 
 </div>
 </div>
@@ -143,18 +226,39 @@ Moved from lane following toward safety-aware control, smoother actuation, and o
 
 <article class="timeline-node timeline-node--major" tabindex="0" markdown="1">
 <div class="timeline-card" markdown="1">
-<span class="timeline-date">Mar 2026</span>
-<img src="/assets/images/projects/smartcar-timeline/2026-03-multiscene-features.jpg" alt="Multi-scene semantic feature analysis across simulated tracks" class="timeline-thumb">
+<span class="timeline-date">Nov 2025</span>
 
-### Multi-Scene Generalization
+### 5. Multimodal PPO and Curriculum Learning
 
-Reworked the training stack around cross-map generalization, semantic observations, and a more stable action hierarchy.
+Moved beyond image-only policies into camera + LiDAR early fusion and curriculum-driven control improvement.
 
 <div class="timeline-detail" markdown="1">
 
-- Introduced multi-scene sampling across Waveshare, generated, mini-monaco, and racing-league-style tracks.
-- Replaced raw action output with high-level steering and throttle targets executed by a lower-level controller.
-- Added semantic observation channels and feature analysis to make map transfer less brittle.
+- Built a 6-channel vision pipeline with RGB, yellow mask, Canny edges, and motion-related features.
+- Added LiDAR sector features and CNN + MLP fusion for policy input.
+- Introduced curriculum learning for speed, CTE tolerance, penalties, and safe-distance behavior.
+- Deployed the multimodal policy path to Jetson Nano for early real-car testing.
+
+</div>
+</div>
+</article>
+
+<article class="timeline-node" tabindex="0" markdown="1">
+<div class="timeline-card" markdown="1">
+<span class="timeline-date">Feb–Mar 2026</span>
+<img src="/assets/images/projects/smartcar-timeline/2026-03-multiscene-features.jpg" alt="Multi-scene semantic feature analysis across simulated tracks" class="timeline-thumb">
+
+### 6. System-Level Sim-to-Real Architecture
+
+Shifted from “train a model” to “align the whole autonomy system.”
+
+<div class="timeline-detail" markdown="1">
+
+- Added action safety layers: slew-rate limiting, low-pass filtering, smoothness penalties, and mismatch diagnostics.
+- Replaced direct actuation with high-level action targets executed by a lower-level controller.
+- Refactored reset/spawn logic to reduce invalid episodes and NPC-coupled failures.
+- Built FiLM/LSTM-based semantic observation and action adapter components for multi-scene training.
+- Validated dual-domain training across Waveshare and Generated Track domains before adding obstacle-oriented training.
 
 </div>
 </div>
@@ -165,15 +269,37 @@ Reworked the training stack around cross-map generalization, semantic observatio
 <span class="timeline-date">Apr 2026</span>
 <img src="/assets/images/projects/smartcar-timeline/2026-04-real-track.jpg" alt="Real taped track with Jetson-based smart cars and obstacle boxes" class="timeline-thumb">
 
-### Real-Car Alignment and Edge Limits
+### 7. Hardware Alignment and Edge Limits
 
-Closed the loop back to hardware by comparing simulator behavior with real vehicle dynamics and testing edge-device limits.
+Closed the loop back to the physical vehicle by measuring real hardware behavior and edge-device constraints.
 
 <div class="timeline-detail" markdown="1">
 
-- Measured simulator-vs-real differences in steering, throttle, control frequency, sensors, and LiDAR semantics.
-- Debugged servo center, PWM behavior, motor issues, and LiDAR data representation.
-- Benchmarked an on-device LLM strategy sidecar and concluded it was better suited for offline or training-time assistance than real-time racing control.
+- Compared simulator and real-car steering, throttle, control frequency, and sensor behavior.
+- Debugged servo center, PWM frequency, motor response, and LiDAR representation issues.
+- Measured LiDAR timing and identified camera/LiDAR/control-loop mismatch.
+- Benchmarked an on-device LLM strategy sidecar and concluded it was not suitable for real-time racing control on Jetson Nano.
+
+</div>
+</div>
+</article>
+
+<article class="timeline-node timeline-node--major" tabindex="0" markdown="1">
+<div class="timeline-card" markdown="1">
+<span class="timeline-date">May 2026</span>
+
+### 8. V17 Endpoint Deployment Freeze
+
+Completed the Jetson-side engineering deployment chain and froze the endpoint validation scope.
+
+<div class="timeline-detail" markdown="1">
+
+- Exported the V17 actor through ONNX and built a TensorRT FP16 engine.
+- Implemented CUDA runtime inference without adding PyCUDA as a deployment dependency.
+- Moved LiDAR sectorization out of the main vehicle loop.
+- Converted DataCollector to asynchronous logging and cached Jetson telemetry in a background thread.
+- Added engine/metadata preflight, LiDAR/RP2040 freshness gates, inference timeout counters, and shadow non-takeover validation.
+- Completed repeated TensorRT shadow validation, including 180-second, 10-minute, and 20-minute runs.
 
 </div>
 </div>
@@ -181,11 +307,45 @@ Closed the loop back to hardware by comparing simulator behavior with real vehic
 
 </div>
 
-## What I Learned
+## Selected Engineering Results
 
-- How simulation workflows differ from physical vehicle deployment
-- Why repeatable configuration and track profiles matter for RL experiments
-- How hardware constraints shape model deployment decisions
+| Area | Result |
+|---|---|
+| Model deployment | Actor-only ONNX export and TensorRT FP16 runtime on Jetson Nano |
+| Runtime profiling | Separated actor inference from image preprocessing, LiDAR processing, logging, and telemetry overhead |
+| TensorRT benefit | Actor residual roughly halved in optimized PyTorch vs TensorRT A/B comparisons |
+| Logging | DataCollector moved from blocking synchronous writes to asynchronous queue-based logging |
+| LiDAR processing | 360-degree LiDAR sectorization moved out of the main vehicle loop |
+| Safety checks | Engine, metadata, LiDAR, RP2040, and inference-timeout gates added before or during runtime |
+| Shadow validation | Final endpoint chain validated through repeated non-takeover TensorRT shadow runs |
+
+<div class="limitation-box" markdown="1">
+
+### Scope and Limitation
+
+The V17 endpoint deployment milestone evaluates the **Jetson-side engineering chain**: model export, TensorRT inference, runtime stability, logging, safety gates, and shadow-mode reproducibility.
+
+It does **not** claim that the model has solved real-car obstacle avoidance, full active closed-loop racing, or multi-vehicle overtaking. Those remain policy-quality and active-validation problems, not endpoint-deployment conclusions.
+
+</div>
+
+## What This Project Demonstrates
+
+This project demonstrates my ability to work across the full stack of an autonomous system:
+
+- reinforcement learning training and curriculum design;
+- multimodal perception and sensor preprocessing;
+- embedded AI deployment on Jetson Nano;
+- real-time runtime profiling and bottleneck isolation;
+- hardware debugging across camera, LiDAR, PWM, motor, and telemetry layers;
+- sim-to-real alignment for dynamics and sensor timing;
+- safety-oriented validation and reproducible experiment reporting.
+
+The value of the project is not a single checkpoint. The value is the engineering process that turned a fragile research prototype into a measurable, debuggable, and deployable edge autonomy system.
+
+## Recognition
+
+- **05/28/2026**: Received the **2026 Outstanding Master's Student Award in Computer Engineering** as a master's student RA. The announcement was shared by [IntelliSys Lab](https://intellisys.haow.us/), with the SES community event [video timestamp](https://youtu.be/c1m_otsr8sM?si=woDszEBnCbNG9tgU&t=1057).
 
 ## Links
 
