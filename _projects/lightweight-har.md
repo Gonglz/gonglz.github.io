@@ -45,4 +45,5 @@ The project demonstrates a practical edge AI direction: start with a stronger te
 ## Links
 
 - [GitHub Repository](https://github.com/Gonglz/Lightweight-Human-Activity-Recognition-with-Model-Distillation)
+- [Presentation Slides (PDF)](/assets/files/projects/lightweight-har/lightweight-har-model-distillation-slides.pdf)
 - [Projects Overview](/projects/)

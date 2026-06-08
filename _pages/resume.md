@@ -35,6 +35,10 @@ Teacher-student distillation for wearable-sensor activity recognition, targeting
 Privacy-preserving recommendation system using encrypted identifiers, zero-knowledge validation, and matrix factorization.  
 [Case study](/projects/encrypted-collaborative-filtering/) / [GitHub](https://github.com/Gonglz/Encrypted-Collaborative-Filtering-for-Privacy-Preserving-Recommendation)
 
+**Stevens IT Quackathon: Data-Driven Ducks**  
+Spring 2025 team concept for an AI academic and career guidance assistant connecting student goals with curriculum, alumni insight, and faculty expertise.  
+[Project page](/projects/stevens-quackathon-data-driven-ducks/) / [Stevens Quackathon](https://www.stevens.edu/it/quackathon)
+
 ## Research Interests
 
 - Embedded AI and edge deployment

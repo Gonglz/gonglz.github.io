@@ -3,7 +3,7 @@ title: "Projects"
 permalink: /projects/
 ---
 
-This portfolio focuses on embedded AI, edge intelligence, autonomous systems, and privacy-preserving machine learning.
+This portfolio focuses on embedded AI, edge intelligence, autonomous systems, applied AI assistants, and privacy-preserving machine learning.
 
 <div class="portfolio-grid" markdown="1">
 
@@ -18,6 +18,20 @@ Deploying reinforcement learning policies to a DonkeyCar platform with a simulat
 **Stack:** Python / DonkeyCar / Jetson / RL / Computer Vision
 
 [Case Study](/projects/donkeycar-rl-racing/) / [GitHub](https://github.com/Gonglz/DonkeyCar-RL-Racing)
+
+</section>
+
+<section class="portfolio-card" markdown="1">
+
+### [FalCom / APPFL Compressor Acceleration](/projects/compressor/)
+
+Python/C ABI integration, native C codec work, OpenMP/SIMD CPU optimization, and guarded CUDA q8 experiments for model-update compression.
+
+**Focus:** Model-update compression, Python/C ABI integration, CPU SIMD/OpenMP optimization, CUDA feasibility, correctness-gated benchmarking.
+
+**Stack:** Python / C / CUDA / OpenMP / SIMD / APPFL
+
+[Case Study](/projects/compressor/) / [GitHub](https://github.com/Gonglz/Compressor)
 
 </section>
 
@@ -51,15 +65,15 @@ A privacy-preserving recommendation system using encrypted IDs, zero-knowledge p
 
 <section class="portfolio-card" markdown="1">
 
-### [Donkey Car RL Beginner Guide](/projects/donkeycar-beginner-guide/)
+### [Stevens IT Quackathon: Data-Driven Ducks](/projects/stevens-quackathon-data-driven-ducks/)
 
-A structured beginner guide for teaching reinforcement learning through a DonkeyCar simulator workflow.
+A Spring 2025 Stevens IT Quackathon team concept for an AI academic and career guidance assistant.
 
-**Focus:** Technical education, reinforcement learning, simulation setup, training and testing workflow, beginner-friendly documentation.
+**Focus:** AI assistant design, academic planning, career guidance, curriculum-aware recommendations, student success workflows.
 
-**Stack:** Python / DonkeyCar / Reinforcement Learning / Technical Writing
+**Stack:** Microsoft AI Technology / Recommendation Systems / NLP / Student Success
 
-[Project Page](/projects/donkeycar-beginner-guide/) / [GitHub](https://github.com/Gonglz/donkey-car-beginner-guide)
+[Project Page](/projects/stevens-quackathon-data-driven-ducks/) / [Stevens Quackathon](https://www.stevens.edu/it/quackathon)
 
 </section>
 

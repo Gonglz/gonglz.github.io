@@ -71,5 +71,4 @@ Privacy-preserving recommendation system using encrypted identifiers, zero-knowl
 
 The notes section will collect implementation notes, experiment logs, and deployment writeups.
 
-- [Donkey Car RL Beginner Guide](/projects/donkeycar-beginner-guide/)
 - [Notes roadmap](/notes/)

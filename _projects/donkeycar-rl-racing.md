@@ -36,6 +36,10 @@ The project is organized around a simulator-to-device workflow:
 
 This is the strongest flagship project for the site because it combines autonomous systems, reinforcement learning, and edge deployment in one coherent engineering story.
 
+## Recognition
+
+- **05/28/2026**: Received the **2026 Outstanding Master's Student Award in Computer Engineering** as a master's student RA. The announcement was shared by [IntelliSys Lab](https://intellisys.haow.us/), with the SES community event [video timestamp](https://youtu.be/c1m_otsr8sM?si=woDszEBnCbNG9tgU&t=1057).
+
 ## Project Timeline
 
 This timeline compresses the raw weekly engineering logs into a public project story. It keeps only the major inflection points: system stability, perception, sim-to-real deployment, multi-agent work, generalization, and hardware alignment.

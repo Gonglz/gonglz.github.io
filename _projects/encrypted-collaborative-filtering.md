@@ -45,4 +45,5 @@ This project is a strong complement to the embedded AI work because it shows mac
 ## Links
 
 - [GitHub Repository](https://github.com/Gonglz/Encrypted-Collaborative-Filtering-for-Privacy-Preserving-Recommendation)
+- [Project Summary Report (PPTX)](/assets/files/projects/encrypted-collaborative-filtering/encrypted-collaborative-filtering-project-report.pptx)
 - [Projects Overview](/projects/)
