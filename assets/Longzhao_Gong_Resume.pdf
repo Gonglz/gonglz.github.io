@@ -1,257 +1,319 @@
-%PDF-1.4
+%PDF-1.3
+%##################################################
 1 0 obj
-<< /Type /Catalog /Pages 2 0 R >>
+<<
+/F1 2 0 R /F2 3 0 R /F3 4 0 R
+>>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
 endobj
 3 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+<<
+/BaseFont /Times-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
 endobj
 4 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+<<
+/BaseFont /Times-Roman /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
+>>
 endobj
 5 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+<<
+/Contents 9 0 R /MediaBox [ 0 0 612 792 ] /Parent 8 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
 endobj
 6 0 obj
-<< /Length 6072 >>
+<<
+/PageMode /UseNone /Pages 8 0 R /Type /Catalog
+>>
+endobj
+7 0 obj
+<<
+/Author (anonymous) /CreationDate (D:20260608092950+00'00') /Creator (anonymous) /Keywords () /ModDate (D:20260608092950+00'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (unspecified) /Title (untitled) /Trapped /False
+>>
+endobj
+8 0 obj
+<<
+/Count 1 /Kids [ 5 0 R ] /Type /Pages
+>>
+endobj
+9 0 obj
+<<
+/Length 11199
+>>
 stream
-BT
-/F2 14 Tf
-50 760.0 Td
-(LONGZHAO GONG) Tj
--50 -760.0 Td
-/F1 7 Tf
-50 744.0 Td
-(Hoboken, NJ | +1 551-376-8192 | gonglz@hotmail.com | linkedin.com/in/gonglz | github.com/Gonglz | gonglz.github.io) Tj
--50 -744.0 Td
-/F2 10 Tf
-50 735.5 Td
-(Edge AI / Robotics / ML Systems) Tj
--50 -735.5 Td
-/F1 8 Tf
-50 723.5 Td
-(M.S. Computer Engineering candidate specializing in edge inference, GPU acceleration, robotics/IoT deployment, and performance-critical ML systems.) Tj
--50 -723.5 Td
-/F1 8 Tf
-50 714.0 Td
-(Built and validated systems across the stack, from C/CUDA/OpenMP compression kernels and distributed GNN training to Jetson TensorRT edge deployment,) Tj
--50 -714.0 Td
-/F1 8 Tf
-50 704.5 Td
-(with reproducible benchmarks, correctness gates, and quantified latency/speedup results.) Tj
--50 -704.5 Td
-/F1 8 Tf
-50 695.0 Td
-() Tj
--50 -695.0 Td
-/F2 9 Tf
-50 683.5 Td
-(EDUCATION) Tj
--50 -683.5 Td
-/F1 8 Tf
-50 672.5 Td
-(Stevens Institute of Technology, Hoboken, NJ | M.S. in Computer Engineering, GPA: 3.94/4.00 | Sep 2024 - May 2026) Tj
--50 -672.5 Td
-/F1 7 Tf
-50 663.0 Td
-(Relevant Coursework: Embedded Systems, Machine Learning, CUDA Programming, Computer Architecture, Internet of Things) Tj
--50 -663.0 Td
-/F1 8 Tf
-50 654.5 Td
-(Chang'an University, Xi'an, China | B.E. in Automation | Aug 2016 - Jun 2020) Tj
--50 -654.5 Td
-/F1 7 Tf
-50 645.0 Td
-(Relevant Coursework: Automatic Control Theory, Digital Electronics, Analog Electronics) Tj
--50 -645.0 Td
-/F1 8 Tf
-50 636.5 Td
-() Tj
--50 -636.5 Td
-/F2 9 Tf
-50 625.0 Td
-(TECHNICAL SKILLS) Tj
--50 -625.0 Td
-/F1 8 Tf
-50 614.0 Td
-(Programming: Python, C/C++, SQL, CUDA) Tj
--50 -614.0 Td
-/F1 8 Tf
-50 604.5 Td
-(Machine Learning / Deep Learning: PyTorch, Stable-Baselines3, RecurrentPPO, GNN, RL, Transformers, LSTM) Tj
--50 -604.5 Td
-/F1 8 Tf
-50 595.0 Td
-(Edge AI / Model Deployment: ONNX, TensorRT FP16, model conversion, low-latency inference) Tj
--50 -595.0 Td
-/F1 8 Tf
-50 585.5 Td
-(Robotics / Perception / IoT: DonkeyCar, LiDAR sectorization, camera, STM32, embedded control, sensor integration, IoT systems) Tj
--50 -585.5 Td
-/F1 8 Tf
-50 576.0 Td
-(GPU / Systems Optimization: CUDA kernels, shared memory, warp-level parallelism, OpenMP, SIMD) Tj
--50 -576.0 Td
-/F1 8 Tf
-50 566.5 Td
-(Tools & Cloud: Linux, Git, Docker) Tj
--50 -566.5 Td
-/F1 8 Tf
-50 557.0 Td
-() Tj
--50 -557.0 Td
-/F2 9 Tf
-50 545.5 Td
-(PROJECTS) Tj
--50 -545.5 Td
-/F2 8 Tf
-50 534.5 Td
-(Jetson Nano Edge TensorRT Deployment for DonkeyCar Robot, IntelliSys Lab | Jul 2025 - Apr 2026) Tj
--50 -534.5 Td
-/F1 7 Tf
-50 525.0 Td
-(Led sim-to-real deployment for a DonkeyCar RL robot by unifying simulator and Jetson sensor/action interfaces.) Tj
--50 -525.0 Td
-/F1 7 Tf
-50 516.5 Td
-(Engineered a semantic vision encoder for lane, edge, obstacle, and motion features for more stable DonkeyCar RL observations.) Tj
--50 -516.5 Td
-/F1 7 Tf
-50 508.0 Td
-(Deployed ONNX/TensorRT FP16 inference and decoupled LiDAR preprocessing, cutting actor-stage p95 latency by 58.4% vs. PyTorch and shrinking) Tj
--50 -508.0 Td
-/F1 7 Tf
-50 499.5 Td
-(DataCollector latency from 537 ms to 5.67 ms.) Tj
--50 -499.5 Td
-/F2 8 Tf
-50 491.0 Td
-(PeMS Spatiotemporal Traffic Forecasting with Graph Neural Networks | Mar 2025 - May 2025) Tj
--50 -491.0 Td
-/F1 7 Tf
-50 481.5 Td
-(Built a reproducible PeMS GNN forecasting pipeline with anomaly-aware imputation, station graph construction, weather-aware features, and PyG) Tj
--50 -481.5 Td
-/F1 7 Tf
-50 473.0 Td
-(GraphSAGE/NeighborSampler training.) Tj
--50 -473.0 Td
-/F1 7 Tf
-50 464.5 Td
-(Scaled GraphSAGE with 2-GPU DDP workload sharding, achieving 1.43x speedup over 33,177 timestamps, 4,883 stations, and 162M timestamp-station) Tj
--50 -464.5 Td
-/F1 7 Tf
-50 456.0 Td
-(pairs.) Tj
--50 -456.0 Td
-/F2 8 Tf
-50 447.5 Td
-(Azure OpenAI Career Coach Recommendation Platform | Apr 2025 - May 2025) Tj
--50 -447.5 Td
-/F1 7 Tf
-50 438.0 Td
-(Delivered an Azure OpenAI career recommendation workflow with checkpoint recovery and API fallback logic; selected as a Top 25% Finalist at the Stevens IT) Tj
--50 -438.0 Td
-/F1 7 Tf
-50 429.5 Td
-(Quackathon.) Tj
--50 -429.5 Td
-/F1 8 Tf
-50 421.0 Td
-() Tj
--50 -421.0 Td
-/F2 9 Tf
-50 409.5 Td
-(PROFESSIONAL EXPERIENCE) Tj
--50 -409.5 Td
-/F2 8 Tf
-50 398.5 Td
-(APECS Lab, Stevens Institute of Technology, Hoboken, NJ | Research Assistant | Aug 2025 - Dec 2025) Tj
--50 -398.5 Td
-/F1 7 Tf
-50 389.0 Td
-(Owned the FalCom/APPFL model-update compression acceleration path across Python/C ABI integration, native C codec implementation, OpenMP/SIMD CPU optimization,) Tj
--50 -389.0 Td
-/F1 7 Tf
-50 380.5 Td
-(and guarded CUDA q8 experimental codec.) Tj
--50 -380.5 Td
-/F1 7 Tf
-50 372.0 Td
-(Reduced ResNet50 CPU compression latency from 797.62 ms to 211.36 ms on 8 threads \(3.77x\).) Tj
--50 -372.0 Td
-/F1 7 Tf
-50 363.5 Td
-(Achieved 9.37x CUDA compress-only / 10.8x closed-loop compress-decompress speedup under consistent profiling and correctness gates.) Tj
--50 -363.5 Td
-/F2 8 Tf
-50 355.0 Td
-(Project Engineer, Foshan Guanggong Renewable Resources Recycling Co., Ltd. | Dec 2022 - Mar 2024) Tj
--50 -355.0 Td
-/F1 7 Tf
-50 345.5 Td
-(Supported factory-area energy storage deployment planning by translating site constraints, capacity requirements, and equipment interfaces into implementation inputs for system) Tj
--50 -345.5 Td
-/F1 7 Tf
-50 337.0 Td
-(design review.) Tj
--50 -337.0 Td
-/F2 8 Tf
-50 328.5 Td
-(Research Assistant, School of Microelectronics, Xidian University | Aug 2020 - Oct 2022) Tj
--50 -328.5 Td
-/F1 7 Tf
-50 319.0 Td
-(Integrated sensors and circuit-level embedded controls for high-speed train pneumatic test systems, supporting reliability-oriented data collection, actuator response testing, and) Tj
--50 -319.0 Td
-/F1 7 Tf
-50 310.5 Td
-(control-loop validation.) Tj
--50 -310.5 Td
-/F1 8 Tf
-50 302.0 Td
-() Tj
--50 -302.0 Td
-/F2 9 Tf
-50 290.5 Td
-(HONORS & AWARDS) Tj
--50 -290.5 Td
-/F1 7 Tf
-50 279.5 Td
-(Outstanding Master Student Award in Computer Engineering \(Top 10%\) | May 2026) Tj
--50 -279.5 Td
-/F1 7 Tf
-50 271.0 Td
-(Finalist Award \(Top 25%\), Stevens IT Quackathon Competition | Apr 2025) Tj
--50 -271.0 Td
-/F1 7 Tf
-50 262.5 Td
-(Bronze Award, College Student Innovation & Entrepreneurship Competition | May 2020) Tj
--50 -262.5 Td
-/F1 7 Tf
-50 254.0 Td
-(First Prize \(Top 10%\), RoboMaster China Robot Contest | Sep 2019) Tj
--50 -254.0 Td
-/F1 7 Tf
-50 245.5 Td
-(LANGUAGES: Mandarin Chinese \(native\), English \(fluent\)) Tj
--50 -245.5 Td
-ET
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+BT /F2 15 Tf 18 TL ET
+BT 1 0 0 1 237.03 760 Tm (LONGZHAO GONG) Tj T* ET
+BT /F3 8.5 Tf 10.2 TL ET
+BT 1 0 0 1 101.83 748 Tm (Hoboken, NJ | +1 551-376-8192 | gonglz@hotmail.com | linkedin.com/in/gonglz | github.com/Gonglz | gonglz.github.io) Tj T* ET
+BT /F2 10.5 Tf 12.6 TL ET
+BT 1 0 0 1 231.9172 737 Tm (Edge AI / Robotics / ML Systems) Tj T* ET
+BT /F3 8.7 Tf 10.44 TL ET
+BT 1 0 0 1 55.0833 726 Tm (M.S. Computer Engineering candidate specializing in edge inference, GPU acceleration, robotics/IoT deployment, and performance-critical ML) Tj T* ET
+BT /F3 8.7 Tf 10.44 TL ET
+BT 1 0 0 1 291.1361 716.5 Tm (systems.) Tj T* ET
+BT /F3 8.7 Tf 10.44 TL ET
+BT 1 0 0 1 51.1857 707 Tm (Built and validated systems across the stack, from C/CUDA/OpenMP compression kernels and distributed GNN training to Jetson TensorRT edge) Tj T* ET
+BT /F3 8.7 Tf 10.44 TL ET
+BT 1 0 0 1 128.7723 697.5 Tm (deployment, with reproducible benchmarks, correctness gates, and quantified latency/speedup results.) Tj T* ET
+BT /F2 11 Tf 13.2 TL ET
+BT 1 0 0 1 40 686 Tm (EDUCATION) Tj T* ET
+.8 w
+n 40 683 m 572 683 l S
+BT /F2 10 Tf 12 TL ET
+BT 1 0 0 1 40 673 Tm (Stevens Institute of Technology) Tj T* ET
+BT /F3 10 Tf 12 TL ET
+BT 1 0 0 1 519.23 673 Tm (Hoboken, NJ) Tj T* ET
+BT /F3 10 Tf 12 TL ET
+BT 1 0 0 1 40 662.5 Tm (M.S. in Computer Engineering, GPA: 3.94/4.00) Tj T* ET
+BT /F3 10 Tf 12 TL ET
+BT 1 0 0 1 485.34 662.5 Tm (Sep 2024 - May 2026) Tj T* ET
+BT /F3 9.3 Tf 11.16 TL ET
+BT 1 0 0 1 40 652 Tm (Relevant Coursework: Embedded Systems, Machine Learning, CUDA Programming, Computer Architecture, Internet of Things) Tj T* ET
+BT /F2 10 Tf 12 TL ET
+BT 1 0 0 1 40 641 Tm (Chang'an University) Tj T* ET
+BT /F3 10 Tf 12 TL ET
+BT 1 0 0 1 521.87 641 Tm (Xi'an, China) Tj T* ET
+BT /F3 10 Tf 12 TL ET
+BT 1 0 0 1 40 630.5 Tm (B.E. in Automation) Tj T* ET
+BT /F3 10 Tf 12 TL ET
+BT 1 0 0 1 487.56 630.5 Tm (Aug 2016 - Jun 2020) Tj T* ET
+BT /F3 9.3 Tf 11.16 TL ET
+BT 1 0 0 1 40 620 Tm (Relevant Coursework: Automatic Control Theory, Digital Electronics, Analog Electronics) Tj T* ET
+BT /F2 11 Tf 13.2 TL ET
+BT 1 0 0 1 40 606 Tm (TECHNICAL SKILLS) Tj T* ET
+.8 w
+n 40 603 m 572 603 l S
+BT /F2 9.6 Tf 11.52 TL ET
+BT 1 0 0 1 40 593 Tm (Programming:) Tj T* ET
+BT /F3 9.6 Tf 11.52 TL ET
+BT 1 0 0 1 102.7872 593 Tm (Python, C/C++, SQL, CUDA) Tj T* ET
+BT /F2 9.6 Tf 11.52 TL ET
+BT 1 0 0 1 40 581.5 Tm (Machine Learning / Deep Learning:) Tj T* ET
+BT /F3 9.6 Tf 11.52 TL ET
+BT 1 0 0 1 189.7344 581.5 Tm (PyTorch, Stable-Baselines3, RecurrentPPO, GNN, RL, Transformers, LSTM) Tj T* ET
+BT /F2 9.6 Tf 11.52 TL ET
+BT 1 0 0 1 40 570 Tm (Edge AI / Model Deployment:) Tj T* ET
+BT /F3 9.6 Tf 11.52 TL ET
+BT 1 0 0 1 164.6592 570 Tm (ONNX, TensorRT FP16, model conversion, low-latency inference) Tj T* ET
+BT /F2 9.6 Tf 11.52 TL ET
+BT 1 0 0 1 40 558.5 Tm (Robotics / Perception / IoT:) Tj T* ET
+BT /F3 9.6 Tf 11.52 TL ET
+BT 1 0 0 1 155.0592 558.5 Tm (DonkeyCar, LiDAR sectorization, camera, STM32, embedded control, sensor integration, IoT systems) Tj T* ET
+BT /F2 9.6 Tf 11.52 TL ET
+BT 1 0 0 1 40 547 Tm (GPU / Systems Optimization:) Tj T* ET
+BT /F3 9.6 Tf 11.52 TL ET
+BT 1 0 0 1 162.7968 547 Tm (CUDA kernels, shared memory, warp-level parallelism, OpenMP, SIMD) Tj T* ET
+BT /F2 9.6 Tf 11.52 TL ET
+BT 1 0 0 1 40 535.5 Tm (Tools & Cloud:) Tj T* ET
+BT /F3 9.6 Tf 11.52 TL ET
+BT 1 0 0 1 105.4752 535.5 Tm (Linux, Git, Docker) Tj T* ET
+BT /F2 11 Tf 13.2 TL ET
+BT 1 0 0 1 40 522 Tm (PROJECTS) Tj T* ET
+.8 w
+n 40 519 m 572 519 l S
+BT /F2 9.7 Tf 11.64 TL ET
+BT 1 0 0 1 40 509 Tm (Jetson Nano Edge TensorRT Deployment for DonkeyCar Robot, IntelliSys Lab) Tj T* ET
+BT /F3 9.7 Tf 11.64 TL ET
+BT 1 0 0 1 493.8665 509 Tm (Jul 2025 - Apr 2026) Tj T* ET
+BT /F3 9.2 Tf 11.04 TL ET
+n
+46.3 501 m
+46.3 502.2703 45.27025 503.3 44 503.3 c
+42.72975 503.3 41.7 502.2703 41.7 501 c
+41.7 499.7297 42.72975 498.7 44 498.7 c
+45.27025 498.7 46.3 499.7297 46.3 501 c
+f*
+BT 1 0 0 1 52 499 Tm (Led sim-to-real deployment for a DonkeyCar RL robot by unifying simulator and Jetson sensor/action interfaces, enabling consistent) Tj T* ET
+BT 1 0 0 1 52 488.8 Tm (camera-LiDAR policy inference from training to edge execution.) Tj T* ET
+BT /F3 9.2 Tf 11.04 TL ET
+n
+46.3 481.6 m
+46.3 482.8703 45.27025 483.9 44 483.9 c
+42.72975 483.9 41.7 482.8703 41.7 481.6 c
+41.7 480.3297 42.72975 479.3 44 479.3 c
+45.27025 479.3 46.3 480.3297 46.3 481.6 c
+f*
+BT 1 0 0 1 52 479.6 Tm (Engineered a semantic vision encoder that converted raw camera frames into task-relevant lane, edge, obstacle, and motion features for more) Tj T* ET
+BT 1 0 0 1 52 469.4 Tm (stable DonkeyCar RL observations.) Tj T* ET
+BT /F3 9.2 Tf 11.04 TL ET
+n
+46.3 462.2 m
+46.3 463.4703 45.27025 464.5 44 464.5 c
+42.72975 464.5 41.7 463.4703 41.7 462.2 c
+41.7 460.9297 42.72975 459.9 44 459.9 c
+45.27025 459.9 46.3 460.9297 46.3 462.2 c
+f*
+BT 1 0 0 1 52 460.2 Tm (Hardened the real-time Jetson runtime by deploying ONNX/TensorRT FP16 inference and decoupling blocking LiDAR preprocessing,) Tj T* ET
+BT 1 0 0 1 52 450 Tm (cutting actor-stage p95 latency by 58.4% vs. PyTorch and shrinking DataCollector latency from 537 ms to 5.67 ms.) Tj T* ET
+BT /F2 9.7 Tf 11.64 TL ET
+BT 1 0 0 1 40 439.8 Tm (PeMS Spatiotemporal Traffic Forecasting with Graph Neural Networks) Tj T* ET
+BT /F3 9.7 Tf 11.64 TL ET
+BT 1 0 0 1 486.3296 439.8 Tm (Mar 2025 - May 2025) Tj T* ET
+BT /F3 9.2 Tf 11.04 TL ET
+n
+46.3 431.8 m
+46.3 433.0703 45.27025 434.1 44 434.1 c
+42.72975 434.1 41.7 433.0703 41.7 431.8 c
+41.7 430.5297 42.72975 429.5 44 429.5 c
+45.27025 429.5 46.3 430.5297 46.3 431.8 c
+f*
+BT 1 0 0 1 52 429.8 Tm (Built a reproducible PeMS GNN forecasting pipeline with anomaly-aware imputation, station graph construction, weather-aware features,) Tj T* ET
+BT 1 0 0 1 52 419.6 Tm (and PyG GraphSAGE/NeighborSampler training.) Tj T* ET
+BT /F3 9.2 Tf 11.04 TL ET
+n
+46.3 412.4 m
+46.3 413.6703 45.27025 414.7 44 414.7 c
+42.72975 414.7 41.7 413.6703 41.7 412.4 c
+41.7 411.1297 42.72975 410.1 44 410.1 c
+45.27025 410.1 46.3 411.1297 46.3 412.4 c
+f*
+BT 1 0 0 1 52 410.4 Tm (Scaled GraphSAGE with 2-GPU DDP workload sharding, achieving 1.43x speedup and validating a full-scale run over 33,177 timestamps,) Tj T* ET
+BT 1 0 0 1 52 400.2 Tm (4,883 stations, and 162M timestamp-station pairs.) Tj T* ET
+BT /F2 9.7 Tf 11.64 TL ET
+BT 1 0 0 1 40 390 Tm (Azure OpenAI Career Coach Recommendation Platform) Tj T* ET
+BT /F3 9.7 Tf 11.64 TL ET
+BT 1 0 0 1 487.4063 390 Tm (Apr 2025 - May 2025) Tj T* ET
+BT /F3 9.2 Tf 11.04 TL ET
+n
+46.3 382 m
+46.3 383.2703 45.27025 384.3 44 384.3 c
+42.72975 384.3 41.7 383.2703 41.7 382 c
+41.7 380.7297 42.72975 379.7 44 379.7 c
+45.27025 379.7 46.3 380.7297 46.3 382 c
+f*
+BT 1 0 0 1 52 380 Tm (Built a GPT-3.5 Turbo fine-tuned advising prototype that generated personalized course, academic-planning, and career-path) Tj T* ET
+BT 1 0 0 1 52 369.8 Tm (recommendations from student goals and Stevens curriculum data; selected as a Top 25% Finalist at the Stevens IT Quackathon.) Tj T* ET
+BT /F2 11 Tf 13.2 TL ET
+BT 1 0 0 1 40 359.6 Tm (PROFESSIONAL EXPERIENCE) Tj T* ET
+.8 w
+n 40 356.6 m 572 356.6 l S
+BT /F2 9.7 Tf 11.64 TL ET
+BT 1 0 0 1 40 346.6 Tm (APECS Lab, Stevens Institute of Technology) Tj T* ET
+BT /F3 9.7 Tf 11.64 TL ET
+BT 1 0 0 1 520.8131 346.6 Tm (Hoboken, NJ) Tj T* ET
+BT /F3 9.7 Tf 11.64 TL ET
+BT 1 0 0 1 40 336.6 Tm (Research Assistant) Tj T* ET
+BT /F3 9.7 Tf 11.64 TL ET
+BT 1 0 0 1 487.9495 336.6 Tm (Aug 2025 - Dec 2025) Tj T* ET
+BT /F3 9 Tf 10.8 TL ET
+n
+46.3 328.6 m
+46.3 329.8703 45.27025 330.9 44 330.9 c
+42.72975 330.9 41.7 329.8703 41.7 328.6 c
+41.7 327.3297 42.72975 326.3 44 326.3 c
+45.27025 326.3 46.3 327.3297 46.3 328.6 c
+f*
+BT 1 0 0 1 52 326.6 Tm (Owned the FalCom/APPFL model-update compression acceleration path across Python/C ABI integration, native C codec implementation,) Tj T* ET
+BT 1 0 0 1 52 316.6 Tm (OpenMP/SIMD CPU optimization, and guarded CUDA q8 experimental codec.) Tj T* ET
+BT /F3 9 Tf 10.8 TL ET
+n
+46.3 309.6 m
+46.3 310.8703 45.27025 311.9 44 311.9 c
+42.72975 311.9 41.7 310.8703 41.7 309.6 c
+41.7 308.3297 42.72975 307.3 44 307.3 c
+45.27025 307.3 46.3 308.3297 46.3 309.6 c
+f*
+BT 1 0 0 1 52 307.6 Tm (Reduced ResNet50 CPU compression latency from 797.62 ms to 211.36 ms on 8 threads \(3.77x\) by optimizing the native C codec with safe) Tj T* ET
+BT 1 0 0 1 52 297.6 Tm (grouped OpenMP/SIMD.) Tj T* ET
+BT /F3 9 Tf 10.8 TL ET
+n
+46.3 290.6 m
+46.3 291.8703 45.27025 292.9 44 292.9 c
+42.72975 292.9 41.7 291.8703 41.7 290.6 c
+41.7 289.3297 42.72975 288.3 44 288.3 c
+45.27025 288.3 46.3 289.3297 46.3 290.6 c
+f*
+BT 1 0 0 1 52 288.6 Tm (Achieved 9.37x CUDA compress-only / 10.8x closed-loop compress-decompress speedup under consistent profiling and correctness gates.) Tj T* ET
+BT /F2 9.7 Tf 11.64 TL ET
+BT 1 0 0 1 40 278.6 Tm (Project Engineer, Foshan Guanggong Renewable Resources Recycling Co., Ltd.) Tj T* ET
+BT /F3 9.7 Tf 11.64 TL ET
+BT 1 0 0 1 488.4927 278.6 Tm (Dec 2022 - Mar 2024) Tj T* ET
+BT /F3 9 Tf 10.8 TL ET
+n
+46.3 270.6 m
+46.3 271.8703 45.27025 272.9 44 272.9 c
+42.72975 272.9 41.7 271.8703 41.7 270.6 c
+41.7 269.3297 42.72975 268.3 44 268.3 c
+45.27025 268.3 46.3 269.3297 46.3 270.6 c
+f*
+BT 1 0 0 1 52 268.6 Tm (Supported factory-area energy storage deployment planning by translating site constraints, capacity requirements, and equipment interfaces into) Tj T* ET
+BT 1 0 0 1 52 258.6 Tm (implementation inputs for system design review.) Tj T* ET
+BT /F2 9.7 Tf 11.64 TL ET
+BT 1 0 0 1 40 248.6 Tm (Research Assistant, School of Microelectronics, Xidian University) Tj T* ET
+BT /F3 9.7 Tf 11.64 TL ET
+BT 1 0 0 1 489.5597 248.6 Tm (Aug 2020 - Oct 2022) Tj T* ET
+BT /F3 9 Tf 10.8 TL ET
+n
+46.3 240.6 m
+46.3 241.8703 45.27025 242.9 44 242.9 c
+42.72975 242.9 41.7 241.8703 41.7 240.6 c
+41.7 239.3297 42.72975 238.3 44 238.3 c
+45.27025 238.3 46.3 239.3297 46.3 240.6 c
+f*
+BT 1 0 0 1 52 238.6 Tm (Integrated sensors and circuit-level embedded controls for high-speed train pneumatic test systems, supporting reliability-oriented data) Tj T* ET
+BT 1 0 0 1 52 228.6 Tm (collection, actuator response testing, and control-loop validation.) Tj T* ET
+BT /F2 11 Tf 13.2 TL ET
+BT 1 0 0 1 40 217.6 Tm (HONORS & AWARDS) Tj T* ET
+.8 w
+n 40 214.6 m 572 214.6 l S
+BT /F3 9.5 Tf 11.4 TL ET
+BT 1 0 0 1 40 204.6 Tm (Outstanding Master Student Award in Computer Engineering \(Top 10%\)) Tj T* ET
+BT /F3 9.5 Tf 11.4 TL ET
+BT 1 0 0 1 533.2115 204.6 Tm (May 2026) Tj T* ET
+BT /F3 9.5 Tf 11.4 TL ET
+BT 1 0 0 1 40 194.6 Tm (Finalist Award \(Top 25%\), Stevens IT Quackathon Competition) Tj T* ET
+BT /F3 9.5 Tf 11.4 TL ET
+BT 1 0 0 1 535.8525 194.6 Tm (Apr 2025) Tj T* ET
+BT /F3 9.5 Tf 11.4 TL ET
+BT 1 0 0 1 40 184.6 Tm (Bronze Award, College Student Innovation & Entrepreneurship Competition) Tj T* ET
+BT /F3 9.5 Tf 11.4 TL ET
+BT 1 0 0 1 533.2115 184.6 Tm (May 2020) Tj T* ET
+BT /F3 9.5 Tf 11.4 TL ET
+BT 1 0 0 1 40 174.6 Tm (First Prize \(Top 10%\), RoboMaster China Robot Contest) Tj T* ET
+BT /F3 9.5 Tf 11.4 TL ET
+BT 1 0 0 1 536.375 174.6 Tm (Sep 2019) Tj T* ET
+BT /F2 11 Tf 13.2 TL ET
+BT 1 0 0 1 40 163.6 Tm (LANGUAGES) Tj T* ET
+.8 w
+n 40 160.6 m 572 160.6 l S
+BT /F3 9.5 Tf 11.4 TL ET
+BT 1 0 0 1 40 150.6 Tm (Languages: Mandarin Chinese \(native\), English \(fluent\)) Tj T* ET
+ 
 endstream
 endobj
 xref
-0 7
+0 10
 0000000000 65535 f 
-0000000009 00000 n 
-0000000058 00000 n 
-0000000115 00000 n 
-0000000262 00000 n 
-0000000332 00000 n 
-0000000407 00000 n 
+0000000061 00000 n 
+0000000112 00000 n 
+0000000219 00000 n 
+0000000327 00000 n 
+0000000436 00000 n 
+0000000629 00000 n 
+0000000697 00000 n 
+0000000958 00000 n 
+0000001017 00000 n 
 trailer
-<< /Size 7 /Root 1 0 R >>
+<<
+/ID 
+[<2f5fd99e01daca3fa1a18ef47dd3a320><2f5fd99e01daca3fa1a18ef47dd3a320>]
+% ReportLab generated PDF document -- digest (opensource)
+
+/Info 7 0 R
+/Root 6 0 R
+/Size 10
+>>
 startxref
-6530
+12268
 %%EOF
