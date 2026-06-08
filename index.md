@@ -75,7 +75,7 @@ A Spring 2025 Stevens IT Quackathon team concept for an AI academic and career g
 
 <div class="tag-cloud" markdown="1">
 
-`Embedded AI` `Edge Deployment` `Autonomous Systems` `Model Distillation` `Time-Series Intelligence` `Privacy-Preserving ML`
+`AI Systems Engineering` `Model Deployment` `Reinforcement Learning` `Sim2Real` `GPU / Systems Optimization` `Applied ML`
 
 </div>
 
