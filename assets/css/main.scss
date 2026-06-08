@@ -70,9 +70,22 @@ search: false
   font-size: 0.78rem;
 }
 
+/* Case-study page layout -------------------------------------------------- */
+
+.case-study-hero,
+.metric-grid,
+.architecture-flow,
+.contribution-grid,
+.project-timeline,
+.limitation-box {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+}
+
 .case-study-hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.7fr) minmax(17rem, 0.8fr);
+  grid-template-columns: minmax(0, 1.65fr) minmax(16rem, 0.85fr);
   gap: 1.25rem;
   margin: 0 0 1.6rem;
   padding: 1.4rem;
@@ -120,6 +133,7 @@ search: false
 }
 
 .metric-card {
+  min-width: 0;
   padding: 0.95rem;
   border: 1px solid #d5dde5;
   border-radius: 11px;
@@ -152,18 +166,22 @@ search: false
   line-height: 1.45;
 }
 
+/* Use wrapping cards instead of five fixed columns. Fixed columns were too
+   narrow inside the Minimal Mistakes content column. */
 .architecture-flow {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 0.7rem;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 0.9rem;
   margin: 1rem 0 1.4rem;
 }
 
 .architecture-flow > div {
   position: relative;
-  min-height: 6rem;
-  padding: 0.8rem;
+  min-width: 0;
+  min-height: 5.4rem;
+  padding: 0.9rem;
   border: 1px solid #cfd8e3;
+  border-left: 4px solid #1f6feb;
   border-radius: 10px;
   background: #ffffff;
   color: #172033;
@@ -171,21 +189,8 @@ search: false
   box-shadow: 0 0.5rem 1.1rem rgba(15, 23, 42, 0.045);
 }
 
-.architecture-flow > div:not(:last-child)::after {
-  content: "→";
-  position: absolute;
-  top: 50%;
-  right: -0.6rem;
-  z-index: 2;
-  width: 1.1rem;
-  height: 1.1rem;
-  border-radius: 999px;
-  background: #1f6feb;
-  color: #ffffff;
-  font-size: 0.75rem;
-  line-height: 1.1rem;
-  text-align: center;
-  transform: translateY(-50%);
+.architecture-flow > div::after {
+  content: none;
 }
 
 .architecture-flow span {
@@ -201,6 +206,7 @@ search: false
 }
 
 .contribution-grid > div {
+  min-width: 0;
   padding: 0.95rem;
   border: 1px solid #d5dde5;
   border-left: 4px solid #16a085;
@@ -237,46 +243,46 @@ search: false
   margin-bottom: 0;
 }
 
+/* Timeline: full-width milestone ladder. This is more robust than the old
+   alternating two-column timeline in narrow Jekyll layouts. */
 .project-timeline {
   --timeline-accent: #1f6feb;
-  --timeline-accent-alt: #16a085;
   --timeline-border: #cfd8e3;
   --timeline-ink: #1f2937;
   --timeline-muted: #5d6875;
   position: relative;
-  max-width: 64rem;
-  margin: 2rem auto 2.5rem;
-  padding: 0.25rem 0;
+  display: grid;
+  gap: 1rem;
+  margin: 2rem 0 2.5rem;
+  padding-left: 1.35rem;
 }
 
 .project-timeline::before {
   content: "";
   position: absolute;
-  top: 0.5rem;
-  bottom: 0.5rem;
-  left: 50%;
+  top: 0.35rem;
+  bottom: 0.35rem;
+  left: 0.35rem;
   width: 2px;
+  border-radius: 999px;
   background: linear-gradient(180deg, #b9c7d6, #7f95aa 46%, #b9c7d6);
-  transform: translateX(-50%);
 }
 
 .timeline-node {
   position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 4.5rem minmax(0, 1fr);
-  align-items: start;
-  margin: 0 0 1.35rem;
+  display: block;
+  margin: 0;
   outline: none;
 }
 
 .timeline-node::before {
   content: "";
+  position: absolute;
   z-index: 2;
-  grid-column: 2;
-  justify-self: center;
+  top: 1.15rem;
+  left: -1.36rem;
   width: 0.9rem;
   height: 0.9rem;
-  margin-top: 1.1rem;
   border: 3px solid #ffffff;
   border-radius: 999px;
   background: #64748b;
@@ -286,55 +292,45 @@ search: false
 .timeline-node--major::before {
   width: 1.15rem;
   height: 1.15rem;
+  left: -1.48rem;
   background: var(--timeline-accent);
   box-shadow: 0 0 0 2px #8bbcff, 0 0 0 7px rgba(31, 111, 235, 0.1);
 }
 
-.timeline-card {
+.timeline-card,
+.timeline-node:nth-child(even) .timeline-card {
   position: relative;
-  grid-column: 1;
-  padding: 0.95rem;
+  width: 100%;
+  min-width: 0;
+  padding: 1rem;
   border: 1px solid var(--timeline-border);
   border-left: 4px solid #64748b;
-  border-radius: 8px;
+  border-right: 1px solid var(--timeline-border);
+  border-radius: 9px;
   background: #ffffff;
   box-shadow: 0 0.7rem 1.4rem rgba(31, 41, 55, 0.07);
   transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
 }
 
-.timeline-node--major .timeline-card {
-  border-left-color: var(--timeline-accent);
-}
-
-.timeline-node:nth-child(even) .timeline-card {
-  grid-column: 3;
-  border-right: 4px solid #64748b;
-  border-left-width: 1px;
-}
-
+.timeline-node--major .timeline-card,
 .timeline-node:nth-child(even).timeline-node--major .timeline-card {
-  border-right-color: var(--timeline-accent);
+  border-left-color: var(--timeline-accent);
+  border-right-color: var(--timeline-border);
 }
 
-.timeline-card::after {
+.timeline-card::after,
+.timeline-node:nth-child(even) .timeline-card::after {
   content: "";
   position: absolute;
   top: 1.45rem;
-  right: -0.52rem;
+  left: -0.52rem;
   width: 0.9rem;
   height: 0.9rem;
-  border-top: 1px solid var(--timeline-border);
-  border-right: 1px solid var(--timeline-border);
-  background: #ffffff;
-  transform: rotate(45deg);
-}
-
-.timeline-node:nth-child(even) .timeline-card::after {
-  right: auto;
-  left: -0.52rem;
   border: 0;
   border-bottom: 1px solid var(--timeline-border);
   border-left: 1px solid var(--timeline-border);
+  background: #ffffff;
+  transform: rotate(45deg);
 }
 
 .timeline-date {
@@ -354,7 +350,7 @@ search: false
 .timeline-thumb {
   display: block;
   width: 100%;
-  height: clamp(7rem, 11vw, 9rem);
+  max-height: 13rem;
   margin: 0 0 0.75rem;
   border: 1px solid #d9e2ec;
   border-radius: 6px;
@@ -406,7 +402,7 @@ search: false
 .timeline-node:hover .timeline-detail,
 .timeline-node:focus .timeline-detail,
 .timeline-node:focus-within .timeline-detail {
-  max-height: 18rem;
+  max-height: 22rem;
   margin-top: 0.75rem;
   padding-top: 0.75rem;
   border-top: 1px solid #e3e9f0;
@@ -428,58 +424,30 @@ search: false
     padding: 1rem;
   }
 
-  .architecture-flow {
+  .architecture-flow,
+  .contribution-grid,
+  .metric-grid {
     grid-template-columns: 1fr;
   }
 
-  .architecture-flow > div:not(:last-child)::after {
-    top: auto;
-    right: 50%;
-    bottom: -0.6rem;
-    transform: translateX(50%) rotate(90deg);
-  }
-
   .project-timeline {
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0.25rem;
+    padding-left: 1.15rem;
   }
 
   .project-timeline::before {
-    left: 0.9rem;
-  }
-
-  .timeline-node {
-    grid-template-columns: 1.8rem minmax(0, 1fr);
-    column-gap: 0.75rem;
+    left: 0.28rem;
   }
 
   .timeline-node::before {
-    grid-column: 1;
+    left: -1.25rem;
   }
 
-  .timeline-card,
-  .timeline-node:nth-child(even) .timeline-card {
-    grid-column: 2;
-    border-right-width: 1px;
-    border-left: 4px solid #64748b;
-  }
-
-  .timeline-node--major .timeline-card,
-  .timeline-node:nth-child(even).timeline-node--major .timeline-card {
-    border-left-color: var(--timeline-accent);
-  }
-
-  .timeline-card::after,
-  .timeline-node:nth-child(even) .timeline-card::after {
-    right: auto;
-    left: -0.52rem;
-    border: 0;
-    border-bottom: 1px solid var(--timeline-border);
-    border-left: 1px solid var(--timeline-border);
+  .timeline-node--major::before {
+    left: -1.37rem;
   }
 
   .timeline-thumb {
+    max-height: none;
     height: clamp(8rem, 46vw, 10.5rem);
   }
 }
