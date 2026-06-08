@@ -6,5 +6,17 @@
   content: url("/2BD65542-0481-4E56-ACCF-34D688284A11.png?v=20260608");
 }
 </style>
+<script>
+window.addEventListener("load", function () {
+  var links = document.querySelectorAll(".author__urls a");
+  for (var i = 0; i < links.length; i++) {
+    if (links[i].textContent.trim() === "Email" && i > 0) {
+      links[i].href = "https://www.linkedin.com/in/gonglz/";
+      links[i].innerHTML = '<i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn';
+      break;
+    }
+  }
+});
+</script>
 
 <!-- end custom head snippets -->
