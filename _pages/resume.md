@@ -8,7 +8,8 @@ permalink: /resume/
 **Edge AI / Robotics / ML Systems**  
 Hoboken, NJ · [gonglz@hotmail.com](mailto:gonglz@hotmail.com) · [+1 551-376-8192](tel:+15513768192) · [LinkedIn](https://linkedin.com/in/gonglz) · [GitHub](https://github.com/Gonglz)
 
-[Download PDF Resume](/assets/Longzhao_Gong_Resume.pdf){: .btn .btn--primary}
+[Download English PDF](/assets/Longzhao_Gong_Resume.pdf){: .btn .btn--primary}
+[下载中文简历 PDF](/assets/Longzhao_Gong_Resume_CN.pdf){: .btn .btn--primary}
 
 M.S. Computer Engineering candidate specializing in edge inference, GPU acceleration, robotics/IoT deployment, and performance-critical ML systems. Built and validated systems across the stack, from C/CUDA/OpenMP compression kernels and distributed GNN training to Jetson TensorRT edge deployment, with reproducible benchmarks, correctness gates, and quantified latency/speedup results.
 
