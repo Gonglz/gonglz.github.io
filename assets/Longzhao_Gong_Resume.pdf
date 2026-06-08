@@ -1,0 +1,257 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Length 6072 >>
+stream
+BT
+/F2 14 Tf
+50 760.0 Td
+(LONGZHAO GONG) Tj
+-50 -760.0 Td
+/F1 7 Tf
+50 744.0 Td
+(Hoboken, NJ | +1 551-376-8192 | gonglz@hotmail.com | linkedin.com/in/gonglz | github.com/Gonglz | gonglz.github.io) Tj
+-50 -744.0 Td
+/F2 10 Tf
+50 735.5 Td
+(Edge AI / Robotics / ML Systems) Tj
+-50 -735.5 Td
+/F1 8 Tf
+50 723.5 Td
+(M.S. Computer Engineering candidate specializing in edge inference, GPU acceleration, robotics/IoT deployment, and performance-critical ML systems.) Tj
+-50 -723.5 Td
+/F1 8 Tf
+50 714.0 Td
+(Built and validated systems across the stack, from C/CUDA/OpenMP compression kernels and distributed GNN training to Jetson TensorRT edge deployment,) Tj
+-50 -714.0 Td
+/F1 8 Tf
+50 704.5 Td
+(with reproducible benchmarks, correctness gates, and quantified latency/speedup results.) Tj
+-50 -704.5 Td
+/F1 8 Tf
+50 695.0 Td
+() Tj
+-50 -695.0 Td
+/F2 9 Tf
+50 683.5 Td
+(EDUCATION) Tj
+-50 -683.5 Td
+/F1 8 Tf
+50 672.5 Td
+(Stevens Institute of Technology, Hoboken, NJ | M.S. in Computer Engineering, GPA: 3.94/4.00 | Sep 2024 - May 2026) Tj
+-50 -672.5 Td
+/F1 7 Tf
+50 663.0 Td
+(Relevant Coursework: Embedded Systems, Machine Learning, CUDA Programming, Computer Architecture, Internet of Things) Tj
+-50 -663.0 Td
+/F1 8 Tf
+50 654.5 Td
+(Chang'an University, Xi'an, China | B.E. in Automation | Aug 2016 - Jun 2020) Tj
+-50 -654.5 Td
+/F1 7 Tf
+50 645.0 Td
+(Relevant Coursework: Automatic Control Theory, Digital Electronics, Analog Electronics) Tj
+-50 -645.0 Td
+/F1 8 Tf
+50 636.5 Td
+() Tj
+-50 -636.5 Td
+/F2 9 Tf
+50 625.0 Td
+(TECHNICAL SKILLS) Tj
+-50 -625.0 Td
+/F1 8 Tf
+50 614.0 Td
+(Programming: Python, C/C++, SQL, CUDA) Tj
+-50 -614.0 Td
+/F1 8 Tf
+50 604.5 Td
+(Machine Learning / Deep Learning: PyTorch, Stable-Baselines3, RecurrentPPO, GNN, RL, Transformers, LSTM) Tj
+-50 -604.5 Td
+/F1 8 Tf
+50 595.0 Td
+(Edge AI / Model Deployment: ONNX, TensorRT FP16, model conversion, low-latency inference) Tj
+-50 -595.0 Td
+/F1 8 Tf
+50 585.5 Td
+(Robotics / Perception / IoT: DonkeyCar, LiDAR sectorization, camera, STM32, embedded control, sensor integration, IoT systems) Tj
+-50 -585.5 Td
+/F1 8 Tf
+50 576.0 Td
+(GPU / Systems Optimization: CUDA kernels, shared memory, warp-level parallelism, OpenMP, SIMD) Tj
+-50 -576.0 Td
+/F1 8 Tf
+50 566.5 Td
+(Tools & Cloud: Linux, Git, Docker) Tj
+-50 -566.5 Td
+/F1 8 Tf
+50 557.0 Td
+() Tj
+-50 -557.0 Td
+/F2 9 Tf
+50 545.5 Td
+(PROJECTS) Tj
+-50 -545.5 Td
+/F2 8 Tf
+50 534.5 Td
+(Jetson Nano Edge TensorRT Deployment for DonkeyCar Robot, IntelliSys Lab | Jul 2025 - Apr 2026) Tj
+-50 -534.5 Td
+/F1 7 Tf
+50 525.0 Td
+(Led sim-to-real deployment for a DonkeyCar RL robot by unifying simulator and Jetson sensor/action interfaces.) Tj
+-50 -525.0 Td
+/F1 7 Tf
+50 516.5 Td
+(Engineered a semantic vision encoder for lane, edge, obstacle, and motion features for more stable DonkeyCar RL observations.) Tj
+-50 -516.5 Td
+/F1 7 Tf
+50 508.0 Td
+(Deployed ONNX/TensorRT FP16 inference and decoupled LiDAR preprocessing, cutting actor-stage p95 latency by 58.4% vs. PyTorch and shrinking) Tj
+-50 -508.0 Td
+/F1 7 Tf
+50 499.5 Td
+(DataCollector latency from 537 ms to 5.67 ms.) Tj
+-50 -499.5 Td
+/F2 8 Tf
+50 491.0 Td
+(PeMS Spatiotemporal Traffic Forecasting with Graph Neural Networks | Mar 2025 - May 2025) Tj
+-50 -491.0 Td
+/F1 7 Tf
+50 481.5 Td
+(Built a reproducible PeMS GNN forecasting pipeline with anomaly-aware imputation, station graph construction, weather-aware features, and PyG) Tj
+-50 -481.5 Td
+/F1 7 Tf
+50 473.0 Td
+(GraphSAGE/NeighborSampler training.) Tj
+-50 -473.0 Td
+/F1 7 Tf
+50 464.5 Td
+(Scaled GraphSAGE with 2-GPU DDP workload sharding, achieving 1.43x speedup over 33,177 timestamps, 4,883 stations, and 162M timestamp-station) Tj
+-50 -464.5 Td
+/F1 7 Tf
+50 456.0 Td
+(pairs.) Tj
+-50 -456.0 Td
+/F2 8 Tf
+50 447.5 Td
+(Azure OpenAI Career Coach Recommendation Platform | Apr 2025 - May 2025) Tj
+-50 -447.5 Td
+/F1 7 Tf
+50 438.0 Td
+(Delivered an Azure OpenAI career recommendation workflow with checkpoint recovery and API fallback logic; selected as a Top 25% Finalist at the Stevens IT) Tj
+-50 -438.0 Td
+/F1 7 Tf
+50 429.5 Td
+(Quackathon.) Tj
+-50 -429.5 Td
+/F1 8 Tf
+50 421.0 Td
+() Tj
+-50 -421.0 Td
+/F2 9 Tf
+50 409.5 Td
+(PROFESSIONAL EXPERIENCE) Tj
+-50 -409.5 Td
+/F2 8 Tf
+50 398.5 Td
+(APECS Lab, Stevens Institute of Technology, Hoboken, NJ | Research Assistant | Aug 2025 - Dec 2025) Tj
+-50 -398.5 Td
+/F1 7 Tf
+50 389.0 Td
+(Owned the FalCom/APPFL model-update compression acceleration path across Python/C ABI integration, native C codec implementation, OpenMP/SIMD CPU optimization,) Tj
+-50 -389.0 Td
+/F1 7 Tf
+50 380.5 Td
+(and guarded CUDA q8 experimental codec.) Tj
+-50 -380.5 Td
+/F1 7 Tf
+50 372.0 Td
+(Reduced ResNet50 CPU compression latency from 797.62 ms to 211.36 ms on 8 threads \(3.77x\).) Tj
+-50 -372.0 Td
+/F1 7 Tf
+50 363.5 Td
+(Achieved 9.37x CUDA compress-only / 10.8x closed-loop compress-decompress speedup under consistent profiling and correctness gates.) Tj
+-50 -363.5 Td
+/F2 8 Tf
+50 355.0 Td
+(Project Engineer, Foshan Guanggong Renewable Resources Recycling Co., Ltd. | Dec 2022 - Mar 2024) Tj
+-50 -355.0 Td
+/F1 7 Tf
+50 345.5 Td
+(Supported factory-area energy storage deployment planning by translating site constraints, capacity requirements, and equipment interfaces into implementation inputs for system) Tj
+-50 -345.5 Td
+/F1 7 Tf
+50 337.0 Td
+(design review.) Tj
+-50 -337.0 Td
+/F2 8 Tf
+50 328.5 Td
+(Research Assistant, School of Microelectronics, Xidian University | Aug 2020 - Oct 2022) Tj
+-50 -328.5 Td
+/F1 7 Tf
+50 319.0 Td
+(Integrated sensors and circuit-level embedded controls for high-speed train pneumatic test systems, supporting reliability-oriented data collection, actuator response testing, and) Tj
+-50 -319.0 Td
+/F1 7 Tf
+50 310.5 Td
+(control-loop validation.) Tj
+-50 -310.5 Td
+/F1 8 Tf
+50 302.0 Td
+() Tj
+-50 -302.0 Td
+/F2 9 Tf
+50 290.5 Td
+(HONORS & AWARDS) Tj
+-50 -290.5 Td
+/F1 7 Tf
+50 279.5 Td
+(Outstanding Master Student Award in Computer Engineering \(Top 10%\) | May 2026) Tj
+-50 -279.5 Td
+/F1 7 Tf
+50 271.0 Td
+(Finalist Award \(Top 25%\), Stevens IT Quackathon Competition | Apr 2025) Tj
+-50 -271.0 Td
+/F1 7 Tf
+50 262.5 Td
+(Bronze Award, College Student Innovation & Entrepreneurship Competition | May 2020) Tj
+-50 -262.5 Td
+/F1 7 Tf
+50 254.0 Td
+(First Prize \(Top 10%\), RoboMaster China Robot Contest | Sep 2019) Tj
+-50 -254.0 Td
+/F1 7 Tf
+50 245.5 Td
+(LANGUAGES: Mandarin Chinese \(native\), English \(fluent\)) Tj
+-50 -245.5 Td
+ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000262 00000 n 
+0000000332 00000 n 
+0000000407 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+6530
+%%EOF
