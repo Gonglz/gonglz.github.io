@@ -35,7 +35,19 @@ Simulator-to-device reinforcement learning workflow for autonomous driving exper
 
 <section class="portfolio-card" markdown="1">
 
-### [Lightweight Human Activity Recognition](/projects/lightweight-har/)
+### [FalCom / APPFL Compressor Acceleration](/projects/compressor/)
+
+Python/C ABI integration, native C codec work, OpenMP/SIMD CPU optimization, and guarded CUDA q8 experiments for model-update compression.
+
+**Stack:** Python / C / CUDA / OpenMP / SIMD / APPFL
+
+[Case Study](/projects/compressor/) / [GitHub](https://github.com/Gonglz/Compressor)
+
+</section>
+
+<section class="portfolio-card" markdown="1">
+
+### [Lightweight Human Activity Recognition with Model Distillation](/projects/lightweight-har/)
 
 Teacher-student model distillation for wearable-sensor activity recognition, targeting efficient inference on edge devices.
 
@@ -47,13 +59,13 @@ Teacher-student model distillation for wearable-sensor activity recognition, tar
 
 <section class="portfolio-card" markdown="1">
 
-### [Encrypted Collaborative Filtering](/projects/encrypted-collaborative-filtering/)
+### [Stevens IT Quackathon: Data-Driven Ducks](/projects/stevens-quackathon-data-driven-ducks/)
 
-Privacy-preserving recommendation system using encrypted identifiers, zero-knowledge validation, and matrix factorization.
+A Spring 2025 Stevens IT Quackathon team concept for an AI academic and career guidance assistant.
 
-**Stack:** Python / PyTorch / Recommendation Systems / AES / ZKP
+**Stack:** Microsoft AI Technology / Recommendation Systems / NLP / Student Success
 
-[Case Study](/projects/encrypted-collaborative-filtering/) / [GitHub](https://github.com/Gonglz/Encrypted-Collaborative-Filtering-for-Privacy-Preserving-Recommendation)
+[Project Page](/projects/stevens-quackathon-data-driven-ducks/) / [Stevens Quackathon](https://www.stevens.edu/it/quackathon)
 
 </section>
 
