@@ -70,6 +70,173 @@ search: false
   font-size: 0.78rem;
 }
 
+.case-study-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(17rem, 0.8fr);
+  gap: 1.25rem;
+  margin: 0 0 1.6rem;
+  padding: 1.4rem;
+  border: 1px solid #d5dde5;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #f8fbff 0%, #ffffff 58%, #f3f8ff 100%);
+  box-shadow: 0 0.9rem 2rem rgba(15, 23, 42, 0.06);
+}
+
+.case-study-hero h2 {
+  margin-top: 0;
+  color: #102033;
+  font-size: clamp(1.45rem, 2vw, 2.05rem);
+  line-height: 1.18;
+}
+
+.case-study-hero p {
+  max-width: 48rem;
+  color: #334155;
+  font-size: 1rem;
+}
+
+.case-study-hero__panel {
+  align-self: stretch;
+  padding: 1rem;
+  border: 1px solid #cfd8e3;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.case-study-hero__panel p {
+  margin: 0 0 0.8rem;
+  font-size: 0.9rem;
+}
+
+.case-study-hero__panel p:last-child {
+  margin-bottom: 0;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13.5rem, 1fr));
+  gap: 0.9rem;
+  margin: 1.25rem 0 2rem;
+}
+
+.metric-card {
+  padding: 0.95rem;
+  border: 1px solid #d5dde5;
+  border-radius: 11px;
+  background: #ffffff;
+  box-shadow: 0 0.5rem 1.1rem rgba(15, 23, 42, 0.045);
+}
+
+.metric-card__label {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: #1f6feb;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.metric-card strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: #162033;
+  font-size: 1rem;
+}
+
+.metric-card span:last-child {
+  display: block;
+  color: #5d6875;
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.architecture-flow {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.7rem;
+  margin: 1rem 0 1.4rem;
+}
+
+.architecture-flow > div {
+  position: relative;
+  min-height: 6rem;
+  padding: 0.8rem;
+  border: 1px solid #cfd8e3;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #172033;
+  font-size: 0.9rem;
+  box-shadow: 0 0.5rem 1.1rem rgba(15, 23, 42, 0.045);
+}
+
+.architecture-flow > div:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  top: 50%;
+  right: -0.6rem;
+  z-index: 2;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 999px;
+  background: #1f6feb;
+  color: #ffffff;
+  font-size: 0.75rem;
+  line-height: 1.1rem;
+  text-align: center;
+  transform: translateY(-50%);
+}
+
+.architecture-flow span {
+  color: #64748b;
+  font-size: 0.78rem;
+}
+
+.contribution-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 0.9rem;
+  margin: 1rem 0 1.8rem;
+}
+
+.contribution-grid > div {
+  padding: 0.95rem;
+  border: 1px solid #d5dde5;
+  border-left: 4px solid #16a085;
+  border-radius: 9px;
+  background: #ffffff;
+}
+
+.contribution-grid h3 {
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+.contribution-grid p {
+  margin-bottom: 0;
+  color: #445062;
+  font-size: 0.9rem;
+}
+
+.limitation-box {
+  margin: 1.6rem 0;
+  padding: 1rem 1.05rem;
+  border: 1px solid #f0c36d;
+  border-left: 5px solid #d97706;
+  border-radius: 10px;
+  background: #fff8ea;
+}
+
+.limitation-box h3 {
+  margin-top: 0;
+  color: #7c3f00;
+}
+
+.limitation-box p:last-child {
+  margin-bottom: 0;
+}
+
 .project-timeline {
   --timeline-accent: #1f6feb;
   --timeline-accent-alt: #16a085;
@@ -256,6 +423,22 @@ search: false
 }
 
 @media screen and (max-width: 900px) {
+  .case-study-hero {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .architecture-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .architecture-flow > div:not(:last-child)::after {
+    top: auto;
+    right: 50%;
+    bottom: -0.6rem;
+    transform: translateX(50%) rotate(90deg);
+  }
+
   .project-timeline {
     margin-left: 0;
     margin-right: 0;
