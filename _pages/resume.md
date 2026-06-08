@@ -34,7 +34,7 @@ Relevant Coursework: Automatic Control Theory, Digital Electronics, Analog Elect
 
 **GPU / Systems Optimization:** CUDA kernels, shared memory, warp-level parallelism, OpenMP, SIMD
 
-**Tools & Cloud:** Linux, Git, Docker
+**Tools & Cloud:** Linux, Git, Docker, Azure, Azure Blob Storage, Azure Pipelines, Azure OpenAI, RAG, OpenAI fine-tuning
 
 ## Projects
 
@@ -51,10 +51,13 @@ Mar 2025 - May 2025
 - Built a reproducible PeMS GNN forecasting pipeline with anomaly-aware imputation, station graph construction, weather-aware features, and PyG GraphSAGE/NeighborSampler training.
 - Scaled GraphSAGE with 2-GPU DDP workload sharding, achieving 1.43x speedup and validating a full-scale run over 33,177 timestamps, 4,883 stations, and 162M timestamp-station pairs.
 
-**Azure OpenAI Career Coach Recommendation Platform**  
+**Azure OpenAI Academic & Career Guidance Platform, Stevens IT Quackathon**  
 Apr 2025 - May 2025
 
-- Delivered an Azure OpenAI career recommendation workflow with checkpoint recovery and API fallback logic; selected as a Top 25% Finalist at the Stevens IT Quackathon.
+- Built a team Azure AI prototype that collected student interests, academic goals, and career goals through Microsoft online forms, then stored user inputs and generated artifacts in Azure Blob Storage.
+- Implemented a curriculum-grounded RAG workflow over Stevens course schedules, course descriptions, and syllabus materials to support personalized course recommendation and academic planning responses.
+- Generated structured JSON training data with GPT and fine-tuned a GPT-3.5 Turbo model for academic route and career-path guidance; connected intake, storage, retrieval, model inference, and response generation through Azure pipeline-style workflows.
+- Selected as a Top 25% Finalist at the Stevens IT Quackathon.
 
 ## Professional Experience
 
