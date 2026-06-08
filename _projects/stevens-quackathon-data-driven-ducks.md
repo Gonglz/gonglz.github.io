@@ -1,11 +1,11 @@
 ---
 title: "Stevens IT Quackathon: Data-Driven Ducks"
-excerpt: "A Spring 2025 Stevens IT Quackathon team concept for an AI academic and career guidance assistant."
+excerpt: "A Spring 2025 Stevens IT Quackathon team project building an Azure-based AI academic and career guidance assistant."
 ---
 
 ## One-line Summary
 
-A team concept for an AI academic and career guidance assistant that connects student goals with curriculum, alumni insight, and faculty expertise.
+A team-built Azure AI prototype that combines student intake data, curriculum RAG, and a fine-tuned GPT-3.5 Turbo model to generate personalized course recommendations, academic planning guidance, and career-path suggestions.
 
 ## Context
 
@@ -15,29 +15,31 @@ Data-Driven Ducks was listed as one of the Quackathon teams.
 
 ## Problem
 
-Students often need to make academic and career decisions across fragmented information sources: program requirements, course descriptions, project opportunities, faculty expertise, alumni paths, and career goals. The project explored how an AI assistant could help turn those inputs into more personalized guidance.
+Students often make course, academic-planning, and career decisions using fragmented information sources: course catalogs, course descriptions, syllabi, degree requirements, personal interests, academic goals, and professional goals. The project explored how an AI assistant could collect structured student inputs and turn them into more personalized academic and career guidance.
 
-## Proposed System
+## System Overview
 
-The concept was organized around:
+The team developed an Azure-based academic and career guidance prototype organized around an end-to-end data and AI workflow:
 
-- Student goal and preference intake
-- Curriculum-aware recommendation logic
-- Alumni and career-path signal analysis
-- Faculty expertise and project opportunity matching
-- Guidance for majors, courses, projects, and task planning
-- A chatbot-style interface that could eventually connect with Stevens platforms such as DuckLink, Canvas, and Workday
+- Collected student profile data through Microsoft online forms, including interests, academic goals, career goals, and related planning preferences
+- Stored and managed user-submitted data and generated artifacts in Azure Blob Storage
+- Built a retrieval-augmented generation workflow over Stevens course-related materials, including course schedules, course descriptions, and syllabus content
+- Used GPT to generate structured JSON datasets from curriculum and advising-related materials
+- Fine-tuned a GPT-3.5 Turbo model on structured academic-planning and recommendation data
+- Combined RAG outputs and the fine-tuned model to produce course recommendations, academic route suggestions, and career-path guidance
+- Connected the intake, storage, processing, model, and response-generation stages through Azure pipeline-style workflows
 
 ## My Contribution
 
 - Participated as a member of the Data-Driven Ducks team
-- Helped frame the solution around personalized academic and career guidance
-- Contributed to the AI assistant concept, including how student responses could be connected with curriculum and career signals
-- Focused on making the idea practical for student-facing decision support rather than a generic chatbot
+- Helped shape the project into a student-facing academic and career guidance system rather than a generic chatbot
+- Contributed to the AI workflow design, including how student intake data could be connected with curriculum context and recommendation logic
+- Supported the use of RAG and fine-tuning to make the assistant more grounded in Stevens course information and student planning goals
+- Helped frame the system pipeline from user data collection to final personalized guidance output
 
 ## Technical Stack
 
-`Microsoft AI Technology` `AI Assistant` `Recommendation Systems` `NLP` `Academic Planning` `Student Success`
+`Azure` `Azure Blob Storage` `Azure Pipelines` `Microsoft Forms` `OpenAI` `GPT-3.5 Turbo Fine-tuning` `RAG` `JSON Dataset Generation` `NLP` `Recommendation Systems` `Academic Planning` `Career Guidance`
 
 ## Team
 
@@ -45,7 +47,7 @@ Data-Driven Ducks: Olajide Yusuf, Yogarajan Sivakumar, Nicholas Ofoe, Longzhao G
 
 ## Results / Current Status
 
-The project was presented as a Quackathon concept for tailored academic and career guidance. This portfolio page records the team project and its system direction; it should be read as an event prototype/concept rather than a production Stevens platform.
+The project was presented as a Stevens IT Quackathon team prototype for AI-assisted academic and career planning. This portfolio page records the system design and prototype direction; it should be read as an event prototype rather than a production Stevens platform.
 
 ## Links
 
