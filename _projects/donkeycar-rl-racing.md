@@ -138,6 +138,12 @@ Added engine/metadata preflight checks, LiDAR/RP2040 gates, inference timeout co
 
 </div>
 
+## K–12 Robotics Mentorship
+
+This DonkeyCar work also became the technical basis for a K–12 robotics mentorship project at IntelliSys Lab. I guided high school students through a beginner-friendly DonkeyCar learning path: setting up the vehicle, understanding the camera-to-control loop, collecting driving data, training baseline models, and connecting small autonomous-car experiments to broader robotics and AI concepts.
+
+The public project page is hosted by [IntelliSys Lab K–12 Projects](https://intellisys.haow.us/k12projects/4_project/), and the teaching repository is available as a [DonkeyCar beginner guide](https://github.com/Gonglz/donkey-car-beginner-guide). I keep this section separate from the main RL deployment timeline because its value is different: it demonstrates technical mentoring, documentation, and translating an engineering system into accessible learning material.
+
 ## Project Timeline
 
 This timeline compresses the raw weekly engineering logs into a public engineering story. It intentionally uses **large implementation milestones**, not weekly status updates.
@@ -339,7 +345,8 @@ This project demonstrates my ability to work across the full stack of an autonom
 - real-time runtime profiling and bottleneck isolation;
 - hardware debugging across camera, LiDAR, PWM, motor, and telemetry layers;
 - sim-to-real alignment for dynamics and sensor timing;
-- safety-oriented validation and reproducible experiment reporting.
+- safety-oriented validation and reproducible experiment reporting;
+- technical mentorship and beginner-oriented robotics documentation.
 
 The value of the project is not a single checkpoint. The value is the engineering process that turned a fragile research prototype into a measurable, debuggable, and deployable edge autonomy system.
 
@@ -350,4 +357,6 @@ The value of the project is not a single checkpoint. The value is the engineerin
 ## Links
 
 - [GitHub Repository](https://github.com/Gonglz/DonkeyCar-RL-Racing)
+- [IntelliSys Lab K–12 Project Page](https://intellisys.haow.us/k12projects/4_project/)
+- [DonkeyCar Beginner Guide Repository](https://github.com/Gonglz/donkey-car-beginner-guide)
 - [Projects Overview](/projects/)
