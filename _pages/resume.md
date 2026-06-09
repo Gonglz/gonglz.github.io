@@ -11,7 +11,7 @@ Hoboken, NJ · [gonglz@hotmail.com](mailto:gonglz@hotmail.com) · [+1 551-376-81
 [Download English PDF](/resume_edge.pdf){: .btn .btn--primary}
 [下载中文简历 PDF](/%E5%BC%93%E9%BE%99%E6%98%AD%E7%AE%80%E5%8E%86.pdf){: .btn .btn--primary}
 
-M.S. Computer Engineering candidate specializing in edge inference, GPU acceleration, robotics/IoT deployment, and performance-critical ML systems. Built and validated systems across the stack, from C/CUDA/OpenMP compression kernels and distributed GNN training to Jetson TensorRT edge deployment, with reproducible benchmarks, correctness gates, and quantified latency/speedup results.
+M.S. Computer Engineering graduate specializing in edge inference, computer vision, GPU acceleration, robotics/IoT deployment, and performance-critical ML systems. Built and validated systems across the stack, from C/CUDA/OpenMP compression kernels and distributed GNN training to Jetson TensorRT edge deployment, with reproducible benchmarks, correctness gates, and quantified latency/speedup results.
 
 ## Education
 
@@ -28,6 +28,8 @@ Relevant Coursework: Automatic Control Theory, Digital Electronics, Analog Elect
 **Programming:** Python, C/C++, SQL, CUDA
 
 **Machine Learning / Deep Learning:** PyTorch, Stable-Baselines3, RecurrentPPO, GNN, RL, Transformers, LSTM
+
+**Computer Vision / Perception:** OpenCV, semantic image encoding, lane/edge/obstacle features, YOLO-based perception prototypes, camera-LiDAR fusion
 
 **Edge AI / Model Deployment:** ONNX, TensorRT FP16, model conversion, low-latency inference
 
