@@ -25,7 +25,7 @@ I work on AI systems that run beyond the cloud: autonomous vehicles, model compr
 
 ### [Jetson Edge AI Runtime for DonkeyCar](/projects/donkeycar-rl-racing/)
 
-Camera-LiDAR robotic control deployment on Jetson Nano, with ONNX/TensorRT FP16 actor inference, runtime profiling, async logging, safety gates, and 20-minute shadow validation.
+Camera-LiDAR robotic control deployment on Jetson Nano, with ONNX/TensorRT FP16 actor inference, runtime profiling, async logging, safety gates, and 20-minute shadow validation. Completed at [IntelliSys Lab](https://intellisys.haow.us/), Stevens Institute of Technology.
 
 **Stack:** Python / DonkeyCar / PyTorch / ONNX / TensorRT / Jetson / ROS LiDAR
 
