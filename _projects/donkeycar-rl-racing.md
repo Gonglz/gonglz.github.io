@@ -72,7 +72,7 @@ V17 endpoint deployment chain completed and frozen in shadow mode. Active obstac
 | DataCollector p99 after async logging + telemetry cache | 537.42 ms → 5.67 ms |
 | Final TensorRT shadow validation | 1199.55 s, exit 0 |
 
-The supported claim is that the **Jetson endpoint deployment chain** is observable, reproducible, safety-gated, and validated in shadow mode. I do not claim that V17 solved active real-car obstacle avoidance.
+The supported claim is that the **Jetson endpoint deployment chain** is observable, reproducible, safety-gated, and validated in shadow mode. 
 
 ## Engineering Problem
 
@@ -345,8 +345,6 @@ Completed the Jetson-side engineering deployment chain and froze the endpoint va
 ### Scope and Limitation
 
 The V17 endpoint deployment milestone evaluates the **Jetson-side engineering chain**: model export, TensorRT inference, runtime stability, logging, safety gates, and shadow-mode reproducibility.
-
-It does **not** claim that the model has solved real-car obstacle avoidance, full active closed-loop racing, or multi-vehicle overtaking. Those remain policy-quality and active-validation problems, not endpoint-deployment conclusions.
 
 </div>
 
