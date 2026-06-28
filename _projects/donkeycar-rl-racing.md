@@ -1,13 +1,13 @@
 ---
-title: "Sim-to-Real Autonomous Racing on Jetson Nano"
-excerpt: "An engineering case study of a DonkeyCar / JetRacer reinforcement learning stack, from multi-scene PPO training to Jetson TensorRT deployment, safety gates, and reproducible shadow validation."
+title: "Jetson Edge AI Runtime for DonkeyCar"
+excerpt: "A robotics software and edge AI case study: deploying a camera-LiDAR RecurrentPPO actor to Jetson Nano with ONNX/TensorRT FP16 inference, runtime profiling, safety gates, and reproducible shadow validation."
 classes: wide
 ---
 
 <div class="case-study-hero" markdown="1">
 <div class="case-study-hero__copy" markdown="1">
 
-## Reinforcement learning, multimodal perception, and edge deployment for a small autonomous racing platform
+## Robotics software, multimodal perception, and edge AI deployment for a small autonomous racing platform
 
 This project is an end-to-end autonomous racing system built around DonkeyCar, DonkeySim, Jetson Nano, and a Waveshare JetRacer-style vehicle. The goal was not just to train a reinforcement learning policy in simulation, but to carry that policy through the real deployment chain: sensors, model export, embedded inference, control adaptation, runtime logging, and safety validation.
 
@@ -17,7 +17,7 @@ I treated the project as a **sim-to-real systems engineering problem**. The fina
 <div class="case-study-hero__panel" markdown="1">
 
 **Project type**  
-Autonomous systems / Reinforcement learning / Edge AI
+Robotics software / Edge AI / Autonomous systems
 
 **Platform**  
 Jetson Nano + DonkeyCar / Waveshare JetRacer
@@ -36,13 +36,7 @@ V17 endpoint deployment chain completed and frozen in shadow mode. Active obstac
 <div class="metric-card" markdown="1">
 <span class="metric-card__label">Model</span>
 <strong>RecurrentPPO multimodal actor</strong>
-<span>6-channel semantic image, state vector, LiDAR sectors, and LSTM state</span>
-</div>
-
-<div class="metric-card" markdown="1">
-<span class="metric-card__label">Sensors</span>
-<strong>Camera + 360° LiDAR + RP2040</strong>
-<span>Vision, range sectors, telemetry, scan-age awareness, and runtime diagnostics</span>
+<span>6-channel semantic image, state vector, 72 LiDAR ranges + 72 validity sectors, and LSTM state</span>
 </div>
 
 <div class="metric-card" markdown="1">
@@ -52,12 +46,33 @@ V17 endpoint deployment chain completed and frozen in shadow mode. Active obstac
 </div>
 
 <div class="metric-card" markdown="1">
+<span class="metric-card__label">Runtime</span>
+<strong>Vehicle-loop p95: 696.2 ms → 130.8 ms</strong>
+<span>LiDAR sectorization, async logging, and telemetry cache moved blocking work out of the loop</span>
+</div>
+
+<div class="metric-card" markdown="1">
 <span class="metric-card__label">Validation</span>
-<strong>180s / 10min / 20min shadow runs</strong>
-<span>Preflight checks, safety counters, CSV summaries, and non-takeover shadow mode</span>
+<strong>20-minute TensorRT shadow run</strong>
+<span>1199.55 s, exit 0, no inference timeout, no LiDAR missing, no RP2040 missing</span>
 </div>
 
 </div>
+
+## Endpoint Deployment Evidence
+
+| Area | Result |
+|---|---:|
+| TensorRT actor residual p50 | 25.856 ms → 12.479 ms |
+| TensorRT actor residual p95 | 40.988 ms → 17.046 ms |
+| V17 latency p50 after runtime optimization | 168.570 ms → 87.153 ms |
+| V17 latency p95 after runtime optimization | 253.958 ms → 124.753 ms |
+| Effective FPS mean after runtime optimization | 4.270 → 10.641 |
+| Vehicle-loop p95 after runtime optimization | 696.175 ms → 130.800 ms |
+| DataCollector p99 after async logging + telemetry cache | 537.42 ms → 5.67 ms |
+| Final TensorRT shadow validation | 1199.55 s, exit 0 |
+
+The supported claim is that the **Jetson endpoint deployment chain** is observable, reproducible, safety-gated, and validated in shadow mode. I do not claim that V17 solved active real-car obstacle avoidance.
 
 ## Engineering Problem
 
@@ -113,7 +128,7 @@ Built PPO training loops, parallel simulation workflows, curriculum logic, rewar
 
 <div markdown="1">
 ### Deployment Interface
-Created practical model bridges from PPO to Jetson, including PPO-to-Keras distillation and direct PyTorch policy-weight inference.
+Created practical model bridges from PPO to Jetson, including PPO-to-Keras distillation, direct PyTorch policy-weight inference, and actor-only ONNX/TensorRT deployment.
 </div>
 
 <div markdown="1">
@@ -319,11 +334,11 @@ Completed the Jetson-side engineering deployment chain and froze the endpoint va
 |---|---|
 | Model deployment | Actor-only ONNX export and TensorRT FP16 runtime on Jetson Nano |
 | Runtime profiling | Separated actor inference from image preprocessing, LiDAR processing, logging, and telemetry overhead |
-| TensorRT benefit | Actor residual roughly halved in optimized PyTorch vs TensorRT A/B comparisons |
-| Logging | DataCollector moved from blocking synchronous writes to asynchronous queue-based logging |
+| TensorRT benefit | Actor residual p95 reduced from 40.988 ms to 17.046 ms in optimized A/B testing |
+| Logging | DataCollector p99 reduced from 537.42 ms to 5.67 ms through async logging and telemetry caching |
 | LiDAR processing | 360-degree LiDAR sectorization moved out of the main vehicle loop |
 | Safety checks | Engine, metadata, LiDAR, RP2040, and inference-timeout gates added before or during runtime |
-| Shadow validation | Final endpoint chain validated through repeated non-takeover TensorRT shadow runs |
+| Shadow validation | Final endpoint chain validated in a 1199.55-second non-takeover TensorRT shadow run |
 
 <div class="limitation-box" markdown="1">
 
@@ -357,6 +372,9 @@ The value of the project is not a single checkpoint. The value is the engineerin
 ## Links
 
 - [GitHub Repository](https://github.com/Gonglz/DonkeyCar-RL-Racing)
+- [V17 Runtime Benchmark](https://github.com/Gonglz/DonkeyCar-RL-Racing/blob/main/docs/v17_runtime_benchmark.md)
+- [V17 ONNX / TensorRT Deployment](https://github.com/Gonglz/DonkeyCar-RL-Racing/blob/main/docs/v17_onnx_tensorrt_deployment.md)
+- [V17 Safety and Shadow Validation](https://github.com/Gonglz/DonkeyCar-RL-Racing/blob/main/docs/v17_safety_shadow_validation.md)
 - [IntelliSys Lab K–12 Project Page](https://intellisys.haow.us/k12projects/4_project/)
 - [DonkeyCar Beginner Guide Repository](https://github.com/Gonglz/donkey-car-beginner-guide)
 - [Projects Overview](/projects/)
