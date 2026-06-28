@@ -9,13 +9,13 @@ This portfolio focuses on embedded AI, edge intelligence, autonomous systems, ap
 
 <section class="portfolio-card" markdown="1">
 
-### [DonkeyCar RL Racing](/projects/donkeycar-rl-racing/)
+### [Jetson Edge AI Runtime for DonkeyCar](/projects/donkeycar-rl-racing/)
 
-Deploying reinforcement learning policies to a DonkeyCar platform with a simulator-to-device workflow.
+Deploying a camera-LiDAR robotic-control policy to Jetson Nano with ONNX/TensorRT FP16 inference, runtime profiling, asynchronous logging, safety gates, and non-takeover shadow validation.
 
-**Focus:** Reinforcement learning, autonomous driving simulation, Jetson deployment, track profile design, training pipeline management.
+**Focus:** Robotics software, edge AI deployment, TensorRT inference, sensor runtime, safety validation, sim-to-real alignment.
 
-**Stack:** Python / DonkeyCar / Jetson / RL / Computer Vision
+**Stack:** Python / DonkeyCar / PyTorch / ONNX / TensorRT / Jetson / ROS LiDAR
 
 [Case Study](/projects/donkeycar-rl-racing/) / [GitHub](https://github.com/Gonglz/DonkeyCar-RL-Racing)
 
