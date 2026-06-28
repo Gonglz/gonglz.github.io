@@ -23,11 +23,11 @@ I work on AI systems that run beyond the cloud: autonomous vehicles, model compr
 
 <section class="portfolio-card" markdown="1">
 
-### [DonkeyCar RL Racing](/projects/donkeycar-rl-racing/)
+### [Jetson Edge AI Runtime for DonkeyCar](/projects/donkeycar-rl-racing/)
 
-Simulator-to-device reinforcement learning workflow for autonomous driving experiments on DonkeyCar and Jetson platforms.
+Camera-LiDAR robotic control deployment on Jetson Nano, with ONNX/TensorRT FP16 actor inference, runtime profiling, async logging, safety gates, and 20-minute shadow validation.
 
-**Stack:** Python / DonkeyCar / Reinforcement Learning / Jetson / Computer Vision
+**Stack:** Python / DonkeyCar / PyTorch / ONNX / TensorRT / Jetson / ROS LiDAR
 
 [Case Study](/projects/donkeycar-rl-racing/) / [GitHub](https://github.com/Gonglz/DonkeyCar-RL-Racing)
 
